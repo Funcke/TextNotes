@@ -1,0 +1,57 @@
+#notes {
+    -fx-background-color: white;
+    -fx-pref-width: 220;
+    -fx-pref-height: 380;
+    -fx-control-inner-background: white;
+}
+
+#post {
+    -fx-background-color: white;
+    -fx-padding: 5px;
+    -fx-pref-width: 180;
+    -fx-alignment: center;
+    -fx-text-fill: black;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-border-color: #65a3ff;
+    -fx-background-color:white;
+    -fx-text-fill: white;
+}
+
+.list-cell:odd {
+    -fx-background-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: white;
+    -fx-border-color: #65a3ff;
+    -fx-text-fill: white;
+}
+
+#input {
+    -fx-pref-width: inherit;
+    -fx-border-style: none;
+}
+
+#save, #create {
+    -fx-background-color: #65a3ff;
+    -fx-text-fill: white;
+    -fx-pref-width: 140.0;
+}
+
+AnchorPane {
+    -fx-padding: 0;
+    -fx-end-margin: 0;
+    -fx-start-margin: 0;
+    -fx-font-size: 15px;
+    -fx-font-family: monospace;
+    -fx-background-color: white;
+}
+
+ListView {
+    -fx-padding: 0;
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+    -fx-control-inner-background: #FFFFFF;
+}

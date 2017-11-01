@@ -1,0 +1,132 @@
+package sample;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+
+import java.io.IOException;
+import java.sql.*;
+
+public class LogInController {
+    @FXML Label header;
+    @FXML Label uNameHead;
+    @FXML Label pWordHead;
+    @FXML Label footer;
+    @FXML TextField uName;
+    @FXML PasswordField pWord;
+    @FXML Button submit;
+    @FXML Button signUp;
+    private Connection userDB;
+
+    @FXML
+    public void initialize() {
+        this.header.setText("Log In");
+        this.uNameHead.setText("Username");
+        this.pWordHead.setText("Password");
+        this.connectToDB();
+    }
+
+    @FXML
+    public void submit() {
+        String password = pWord.getText();
+        String username = uName.getText();
+        boolean userValid = false;
+
+        userValid = this.validUser(username, password);
+
+        if (userValid) {
+            try {
+                this.open(username);
+            } catch (IOException e) {
+                System.err.println(e.getLocalizedMessage());
+            }
+        }
+        else {
+            System.err.println("Invalid login data");
+        }
+    }
+
+    @FXML
+    public void signUp(){
+        try {
+            Statement stmt = userDB.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT username, password FROM users;");
+
+            while(rs.next()){
+                if(rs.getString("username").contentEquals(uName.getText())) {
+                    footer.setText("Usernamen already taken");
+                    return;
+                }
+            }
+
+            PreparedStatement pstmt = userDB.prepareStatement("INSERT INTO users (username, password) VALUES(?, ?)");
+            pstmt.setString(1, uName.getText());
+            pstmt.setString(2, pWord.getText());
+            pstmt.execute();
+        }
+        catch(SQLException err) {
+            System.err.println(err.getMessage());
+        }
+    }
+
+    @FXML
+    public void discard() {
+        this.uName.setText("");
+        this.pWord.setText("");
+        this.footer.setText("Don't have an Account?");
+    }
+
+    private void open(String name) throws IOException {
+        Window origin = submit.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/Main.fxml"));
+        Parent root = loader.load();
+        Stage view = new Stage();
+        MainController controller = loader.getController();
+
+        controller.init(name);
+        view.setTitle("Main");
+        view.setScene(new Scene(root, 710, 400));
+        view.show();
+        origin.hide();
+    }
+
+    private boolean connectToDB() {
+        try {
+            userDB = DriverManager.getConnection("jdbc:sqlite:user.db");
+            Statement stmt = userDB.createStatement();
+
+            stmt.execute("CREATE TABLE IF NOT EXISTS users(\n"
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n"
+                    + "username VARCHAR UNIQUE,\n"
+                    + "password VARCHAR NOT NULL\n"
+                    + ");");
+            return true;
+        } catch (SQLException err) {
+            System.err.println(err.getMessage());
+        }
+        return false;
+    }
+
+    private boolean validUser(String username, String password) {
+        try {
+            Statement stmt = userDB.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT username, password FROM users;");
+
+            while(rs.next()){
+                if(rs.getString("username").contentEquals(username) && rs.getString("password").contentEquals(password))
+                    return true;
+            }
+        } catch (SQLException err) {
+            System.err.println(err.getMessage());
+        }
+        return false;
+    }
+
+}
