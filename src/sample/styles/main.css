@@ -1,9 +1,24 @@
+.root {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 1.2em;
+    -fx-text-fill: #000;
+}
+
+#menu {
+    -fx-background-color: #001064;
+    -fx-text-fill: #fff;
+}
+
+#menuText {
+    -fx-text-fill: #fff;
+}
 #notes {
     -fx-background-color: white;
     -fx-pref-width: 220;
     -fx-pref-height: 380;
     -fx-control-inner-background: white;
 }
+
 
 #post {
     -fx-background-color: white;
@@ -40,10 +55,14 @@
     -fx-pref-width: 140.0;
 }
 
+#save:hover, #create:hover {
+    -fx-border-color: #6a0080;
+}
+
 #close {
-    -fx-background-color: #fff;
-    -fx-border-color: fff;
-    -fx-text-fill: #fff;
+    -fx-background-color: #001064;
+    -fx-border-color: #001064;
+    -fx-text-fill: #001064;
 }
 
 #close:hover {
@@ -51,12 +70,10 @@
 }
 
 
-AnchorPane {
+GridPane {
     -fx-padding: 0;
     -fx-end-margin: 0;
     -fx-start-margin: 0;
-    -fx-font-size: 15px;
-    -fx-font-family: monospace;
     -fx-background-color: white;
 }
 

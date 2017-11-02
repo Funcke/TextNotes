@@ -49,4 +49,5 @@ public class SignUpController {
             System.err.println(err.getMessage());
         }
     }
+
 }

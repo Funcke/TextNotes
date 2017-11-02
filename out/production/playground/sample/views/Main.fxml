@@ -3,20 +3,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import java.net.URL?>
-<AnchorPane xmlns="http://javafx.com/javafx"
+<GridPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="sample.MainController"
-            prefHeight="400.0" prefWidth="750.0" >
+            prefHeight="400.0" prefWidth="750.0" alignment="CENTER">
     <stylesheets>
         <URL value="@../styles/main.css"/>
     </stylesheets>
 
     <HBox maxWidth="750.0" maxHeight="400.0">
 
-        <GridPane prefWidth="150.0" prefHeight="400.0" alignment="TOP_CENTER" hgap="10" vgap="10">
+        <GridPane prefWidth="150.0" fx:id="menu" prefHeight="400.0" alignment="TOP_CENTER" hgap="10" vgap="10">
 
-            <Label fx:id="menu" text="Menu" GridPane.rowIndex="0" GridPane.columnIndex="0" textAlignment="RIGHT"/>
-            <Button fx:id="close" text="x" GridPane.rowIndex="0" GridPane.columnIndex="1" textAlignment="RIGHT" onAction="#close"/>
+            <Label fx:id="menuText" text="Menu" GridPane.rowIndex="0" GridPane.columnIndex="0" textAlignment="RIGHT"/>
+            <Button fx:id="close" text="x" GridPane.rowIndex="0" GridPane.columnIndex="1" textAlignment="RIGHT" onAction="#close" alignment="CENTER"/>
             <Button fx:id="create" text="New +" GridPane.rowIndex="1" onAction="#create" />
             <Button fx:id="save" text="Save" GridPane.rowIndex="1" onAction="#save" visible="false" />
 
@@ -24,7 +24,7 @@
 
         <GridPane prefWidth="250.0" prefHeight="400.0" alignment="TOP_CENTER" hgap="10" vgap="10">
 
-            <Label text="Posts" alignment="TOP_CENTER" GridPane.rowIndex="0"/>
+            <Label text="Posts" prefHeight="20" GridPane.rowIndex="0"/>
             <ListView fx:id="notes" GridPane.rowIndex="1" prefWidth="240.0" prefHeight="370.0">
 
             </ListView>
@@ -39,4 +39,4 @@
 
     </HBox>
 
-</AnchorPane>
+</GridPane>
