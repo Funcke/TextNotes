@@ -7,8 +7,8 @@
 
 Button {
     -fx-text-fill: #fff;
-    -fx-background-color: #001064;
-    -fx-border-color: #001064;
+    -fx-background-color: #102027;
+    -fx-border-color: #102027;
 }
 
 Label {
@@ -19,14 +19,14 @@ Button:hover {
 }
 
 TextField, PasswordField {
-    -fx-background-color: #001064;
-    -fx-border-color: #001064;
+    -fx-background-color: #102027;
+    -fx-border-color: #102027;
     -fx-text-fill: #fff;
 }
 TextField:focused, TextField:hover, PasswordField:focused, PasswordField:hover {
     -fx-border-color: #6a0080;
 }
 GridPane {
-    -fx-background-color: #001064;
+    -fx-background-color: #102027;
     -fx-text-fill: #fff;
 }

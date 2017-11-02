@@ -1,45 +1,45 @@
 .root {
     -fx-font-family: "Segoe UI Semibold";
     -fx-font-size: 1.2em;
-    -fx-text-fill: #000;
+    -fx-text-fill: #fff;
 }
 
 #menu {
-    -fx-background-color: #001064;
+    -fx-background-color: #102027;
     -fx-text-fill: #fff;
 }
 
-#menuText {
+Label {
     -fx-text-fill: #fff;
 }
 #notes {
-    -fx-background-color: white;
+    -fx-background-color: #102027;
     -fx-pref-width: 220;
     -fx-pref-height: 380;
-    -fx-control-inner-background: white;
+    -fx-control-inner-background: #102027;
 }
 
 
 #post {
-    -fx-background-color: white;
+    -fx-background-color: #102027;
     -fx-padding: 5px;
     -fx-pref-width: 180;
     -fx-alignment: center;
-    -fx-text-fill: black;
+    -fx-text-fill: #fff;
 }
 
 .list-cell:filled:selected:focused, .list-cell:filled:selected {
     -fx-border-color: #6a0080;
-    -fx-background-color:white;
+    -fx-background-color:#102027;
     -fx-text-fill: white;
 }
 
 .list-cell:odd {
-    -fx-background-color: white;
+    -fx-background-color: #102027;
 }
 
 .list-cell:filled:hover {
-    -fx-background-color: white;
+    -fx-background-color: #102027;
     -fx-border-color: #6a0080;
     -fx-text-fill: white;
 }
@@ -50,7 +50,7 @@
 }
 
 #save, #create {
-    -fx-background-color: #001064;
+    -fx-background-color: #102027;
     -fx-text-fill: #fff;
     -fx-pref-width: 140.0;
 }
@@ -60,9 +60,9 @@
 }
 
 #close {
-    -fx-background-color: #001064;
-    -fx-border-color: #001064;
-    -fx-text-fill: #001064;
+    -fx-background-color: #102027;
+    -fx-border-color: #102027;
+    -fx-text-fill: #102027;
 }
 
 #close:hover {
@@ -74,16 +74,27 @@ GridPane {
     -fx-padding: 0;
     -fx-end-margin: 0;
     -fx-start-margin: 0;
-    -fx-background-color: white;
+    -fx-background-color: #102027;
 }
 
 ListView {
     -fx-padding: 0;
     -fx-start-margin: 0;
     -fx-end-margin: 0;
-    -fx-control-inner-background: #FFFFFF;
+    -fx-control-inner-background: #102027;
 }
 
+.text-area .content {
+    -fx-border-color: #102027;
+    -fx-background-color: #102027;
+    -fx-text-fill: #fff;
+}
+TextArea {
+    -fx-border-style: hidden;
+    -fx-border-insets: 0;
+    -fx-text-fill: #fff;
+}
 TextArea:focused {
     -fx-border-color: #6a0080;
+    -fx-background-color: #102027;
 }
