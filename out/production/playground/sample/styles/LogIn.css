@@ -2,6 +2,28 @@
     -fx-font-size: 1.5em;
 }
 
-#signUp {
-    
+Button {
+    -fx-text-fill: #fff;
+    -fx-background-color: #001064;
+    -fx-border-color: #001064;
+}
+
+Label {
+    -fx-text-fill: #fff;
+}
+Button:hover {
+    -fx-border-color: #6a0080;
+}
+
+TextField, PasswordField {
+    -fx-background-color: #001064;
+    -fx-border-color: #001064;
+    -fx-text-fill: #fff;
+}
+TextField:focused, TextField:hover, PasswordField:focused, PasswordField:hover {
+    -fx-border-color: #6a0080;
+}
+GridPane {
+    -fx-background-color: #001064;
+    -fx-text-fill: #fff;
 }

@@ -14,7 +14,7 @@
 }
 
 .list-cell:filled:selected:focused, .list-cell:filled:selected {
-    -fx-border-color: #65a3ff;
+    -fx-border-color: #6a0080;
     -fx-background-color:white;
     -fx-text-fill: white;
 }
@@ -25,7 +25,7 @@
 
 .list-cell:filled:hover {
     -fx-background-color: white;
-    -fx-border-color: #65a3ff;
+    -fx-border-color: #6a0080;
     -fx-text-fill: white;
 }
 
@@ -35,10 +35,21 @@
 }
 
 #save, #create {
-    -fx-background-color: #65a3ff;
-    -fx-text-fill: white;
+    -fx-background-color: #001064;
+    -fx-text-fill: #fff;
     -fx-pref-width: 140.0;
 }
+
+#close {
+    -fx-background-color: #fff;
+    -fx-border-color: fff;
+    -fx-text-fill: #fff;
+}
+
+#close:hover {
+    -fx-text-fill: #6a0080;
+}
+
 
 AnchorPane {
     -fx-padding: 0;
@@ -54,4 +65,8 @@ ListView {
     -fx-start-margin: 0;
     -fx-end-margin: 0;
     -fx-control-inner-background: #FFFFFF;
+}
+
+TextArea:focused {
+    -fx-border-color: #6a0080;
 }

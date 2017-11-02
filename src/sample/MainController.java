@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -16,7 +17,7 @@ import java.util.List;
 public class MainController {
     @FXML Button create;
     @FXML Button save;
-    //@FXML VBox notes;
+    @FXML Button close;
     @FXML TextArea input;
     @FXML ListView notes;
 
@@ -144,5 +145,17 @@ public class MainController {
         this.save.setVisible(false);
         this.create.setVisible(true);
         this.input.setVisible(false);
+    }
+
+    public void close() {
+        try {
+            notesDB.close();
+        }
+        catch(SQLException err){
+            System.err.println(err.getMessage());
+        }finally {
+            Platform.exit();
+            System.exit(0);
+        }
     }
 }

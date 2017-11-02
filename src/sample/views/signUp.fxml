@@ -6,9 +6,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
+<GridPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+            fx:controller="sample.SignUpController"
+            prefHeight="300" prefWidth="275" alignment="center" hgap="10" vgap="10">
+    <Label text="Hey, Welcome!" GridPane.rowIndex="0"/>
+    <Label text="Username" GridPane.rowIndex="1" />
+    <TextField fx:id="username" GridPane.rowIndex="2"/>
+    <Label text="Password" GridPane.rowIndex="3" />
+    <TextField fx:id="password" GridPane.rowIndex="4" />
+    <Label text="Repeat Password" GridPane.rowIndex="5" />
+    <TextField fx:id="repeatPassword" GridPane.rowIndex="6" />
+    <Button fx:id="send" text="Submit" GridPane.rowIndex="7" onAction="#submit" />
+    <Label fx:id="info" GridPane.rowIndex="8" />
+</GridPane>

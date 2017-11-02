@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.stage.Window;
 
 import java.io.IOException;
@@ -55,44 +57,37 @@ public class LogInController {
 
     @FXML
     public void signUp(){
+
         try {
-            Statement stmt = userDB.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT username, password FROM users;");
-
-            while(rs.next()){
-                if(rs.getString("username").contentEquals(uName.getText())) {
-                    footer.setText("Usernamen already taken");
-                    return;
-                }
-            }
-
-            PreparedStatement pstmt = userDB.prepareStatement("INSERT INTO users (username, password) VALUES(?, ?)");
-            pstmt.setString(1, uName.getText());
-            pstmt.setString(2, pWord.getText());
-            pstmt.execute();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("views/signUp.fxml"));
+            Parent root = loader.load();
+            Stage view = new Stage();
+            view.setTitle("New User");
+            view.setScene(new Scene(root, 300, 275));
+            view.show();
+            SignUpController sn = loader.getController();
+            sn.setConnection(userDB);
         }
-        catch(SQLException err) {
+        catch(IOException err) {
             System.err.println(err.getMessage());
         }
     }
 
     @FXML
     public void discard() {
-        this.uName.setText("");
-        this.pWord.setText("");
-        this.footer.setText("Don't have an Account?");
+        Platform.exit();
     }
 
     private void open(String name) throws IOException {
         Window origin = submit.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("views/Main.fxml"));
         Parent root = loader.load();
-        Stage view = new Stage();
+        Stage view = new Stage(StageStyle.UNDECORATED);
         MainController controller = loader.getController();
 
         controller.init(name);
         view.setTitle("Main");
-        view.setScene(new Scene(root, 710, 400));
+        view.setScene(new Scene(root, 750, 400));
         view.show();
         origin.hide();
     }

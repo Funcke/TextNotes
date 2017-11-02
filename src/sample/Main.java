@@ -5,12 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("views/LogIn.fxml"));
+        primaryStage = new Stage(StageStyle.UNDECORATED);
         primaryStage.setTitle("Log In");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
