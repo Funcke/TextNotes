@@ -19,6 +19,7 @@ public class MainController {
     @FXML Button save;
     @FXML Button close;
     @FXML TextArea input;
+    @FXML Label postText;
     @FXML ListView notes;
 
     private String name = "";
@@ -29,6 +30,7 @@ public class MainController {
 
     public void init(String nm) {
         this.name = nm;
+        this.postText.setText("Note sth. " + this.name + "!");
         initializeForm();
     }
 
@@ -138,7 +140,7 @@ public class MainController {
         this.create.setVisible(false);
         this.save.setVisible(true);
         this.input.setVisible(true);
-        this.input.setFocusTraversable(true);
+        this.input.requestFocus();
     }
 
     private void stopInput() {

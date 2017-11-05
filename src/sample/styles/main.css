@@ -15,7 +15,6 @@ Label {
 #notes {
     -fx-background-color: #102027;
     -fx-pref-width: 220;
-    -fx-pref-height: 380;
     -fx-control-inner-background: #102027;
 }
 
@@ -23,7 +22,7 @@ Label {
 #post {
     -fx-background-color: #102027;
     -fx-padding: 5px;
-    -fx-pref-width: 180;
+    -fx-pref-width: 220;
     -fx-alignment: center;
     -fx-text-fill: #fff;
 }
@@ -69,7 +68,6 @@ Label {
     -fx-text-fill: #6a0080;
 }
 
-
 GridPane {
     -fx-padding: 0;
     -fx-end-margin: 0;
@@ -84,17 +82,16 @@ ListView {
     -fx-control-inner-background: #102027;
 }
 
-.text-area .content {
-    -fx-border-color: #102027;
+.text-area, .content {
     -fx-background-color: #102027;
     -fx-text-fill: #fff;
-}
-TextArea {
-    -fx-border-style: hidden;
     -fx-border-insets: 0;
-    -fx-text-fill: #fff;
+    -fx-background-insets: 0;
+    -fx-border-style:hidden;
+    -fx-text-box-border: transparent;
+    -fx-display-caret: true;
 }
+
 TextArea:focused {
-    -fx-border-color: #6a0080;
     -fx-background-color: #102027;
 }
