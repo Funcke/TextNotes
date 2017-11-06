@@ -25,7 +25,6 @@ public class LogInController {
     @FXML Button submit;
     @FXML Button signUp;
     private Connection userDB;
-    private Stage primaryStage;
 
     @FXML
     public void initialize() {
@@ -60,17 +59,21 @@ public class LogInController {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("views/signUp.fxml"));
-            SignUpController sn = loader.getController();
             Parent root = loader.load();
             Stage view = new Stage();
 
             view.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
-            sn.setConnection(userDB);
             view.setTitle("New User");
             view.setScene(new Scene(root, 300, 275));
             view.show();
+
+            SignUpController sn = loader.getController();
+            sn.setConnection(userDB);
         }
         catch(IOException err) {
+            System.err.println(err.getMessage());
+        }
+        catch(Exception err) {
             System.err.println(err.getMessage());
         }
     }
@@ -87,7 +90,7 @@ public class LogInController {
         MainController controller = loader.getController();
 
         controller.init(name);
-        view.setTitle("Main");
+        view.setTitle("TextNotes");
         view.setScene(new Scene(root, 750, 400));
         view.setResizable(false);
         view.sizeToScene();
@@ -125,5 +128,4 @@ public class LogInController {
         }
         return false;
     }
-
 }
