@@ -2,7 +2,6 @@ package sample;
 
 public class Note {
     private String content;
-    private String owner;
     private int id;
 
     public Note(int id, String cont) {

@@ -9,9 +9,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import javafx.stage.Window;
 
 import java.io.IOException;
 import java.sql.*;
@@ -26,6 +25,7 @@ public class LogInController {
     @FXML Button submit;
     @FXML Button signUp;
     private Connection userDB;
+    private Stage primaryStage;
 
     @FXML
     public void initialize() {
@@ -60,13 +60,15 @@ public class LogInController {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("views/signUp.fxml"));
+            SignUpController sn = loader.getController();
             Parent root = loader.load();
             Stage view = new Stage();
+
+            view.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
+            sn.setConnection(userDB);
             view.setTitle("New User");
             view.setScene(new Scene(root, 300, 275));
             view.show();
-            SignUpController sn = loader.getController();
-            sn.setConnection(userDB);
         }
         catch(IOException err) {
             System.err.println(err.getMessage());
@@ -79,10 +81,9 @@ public class LogInController {
     }
 
     private void open(String name) throws IOException {
-        Window origin = submit.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("views/Main.fxml"));
         Parent root = loader.load();
-        Stage view = new Stage();
+        Stage view = (Stage) signUp.getScene().getWindow();
         MainController controller = loader.getController();
 
         controller.init(name);
@@ -91,7 +92,6 @@ public class LogInController {
         view.setResizable(false);
         view.sizeToScene();
         view.show();
-        origin.hide();
     }
 
     private boolean connectToDB() {

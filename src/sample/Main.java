@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -12,7 +13,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("views/LogIn.fxml"));
-        primaryStage = new Stage(StageStyle.UNDECORATED);
+        primaryStage = new Stage();
+        primaryStage.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
         primaryStage.setTitle("Log In");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();

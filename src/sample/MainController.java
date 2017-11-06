@@ -39,6 +39,7 @@ public class MainController {
         if(notesDB == null) {
             try {
                 notesDB = DriverManager.getConnection("jdbc:sqlite:posts.db");
+
                 System.out.println("Connection succeeded");
             } catch (SQLException err) {
                 System.err.println(err.getLocalizedMessage());
@@ -50,6 +51,7 @@ public class MainController {
                         + " owner text NOT NULL\n"
                         + ");";
                 Statement stmt = notesDB.createStatement();
+
                 stmt.execute(sql);
             } catch (SQLException err) {
                 System.err.println(err.getMessage() + "49");
@@ -60,7 +62,9 @@ public class MainController {
             PreparedStatement stmt = notesDB.prepareStatement("SELECT id, content FROM notes WHERE owner= ? ");
             stmt.setString(1, name);
             ResultSet res = stmt.executeQuery();
+
             noteList.clear();
+
             while(res.next()){
                 noteList.add(new Note(res.getInt("id"), res.getString("content")));
             }
@@ -115,6 +119,7 @@ public class MainController {
             try {
                 if (this.editMode) {
                     PreparedStatement stmt = notesDB.prepareStatement("UPDATE notes SET content = ? WHERE id = ?;");
+
                     stmt.setString(1, input.getText());
                     stmt.setInt(2, this.id);
                     stmt.execute();
@@ -145,17 +150,5 @@ public class MainController {
         this.save.setVisible(false);
         this.create.setVisible(true);
         this.input.setVisible(false);
-    }
-
-    public void close() {
-        try {
-            notesDB.close();
-        }
-        catch(SQLException err){
-            System.err.println(err.getMessage());
-        }finally {
-            Platform.exit();
-            System.exit(0);
-        }
     }
 }
