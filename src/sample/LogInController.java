@@ -82,12 +82,14 @@ public class LogInController {
         Window origin = submit.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("views/Main.fxml"));
         Parent root = loader.load();
-        Stage view = new Stage(StageStyle.UNDECORATED);
+        Stage view = new Stage();
         MainController controller = loader.getController();
 
         controller.init(name);
         view.setTitle("Main");
         view.setScene(new Scene(root, 750, 400));
+        view.setResizable(false);
+        view.sizeToScene();
         view.show();
         origin.hide();
     }

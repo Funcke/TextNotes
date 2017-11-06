@@ -25,5 +25,4 @@
     <TextField fx:id="passwordRepeatVisible" GridPane.rowIndex="6" GridPane.columnIndex="0" visible="false"/>
     <Button fx:id="send" text="Submit" GridPane.rowIndex="7" GridPane.columnIndex="0" onAction="#submit" />
     <CheckBox fx:id="showPassword" GridPane.rowIndex="7" GridPane.columnIndex="1" onAction="#viewPW"/>
-    <Label fx:id="info" GridPane.rowIndex="8" />
 </GridPane>

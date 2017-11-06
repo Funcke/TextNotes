@@ -1,10 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Window;
 
 import java.sql.*;
@@ -15,7 +12,7 @@ public class SignUpController {
     @FXML TextField passwordVisible;
     @FXML PasswordField repeatPassword;
     @FXML TextField passwordRepeatVisible;
-    @FXML Label info;
+    @FXML Alert info;
     @FXML CheckBox showPassword;
     private Connection userDB;
     private boolean unused = true;
@@ -41,17 +38,11 @@ public class SignUpController {
                 if(this.unused && this.passwordVisible.getText().contentEquals(this.passwordRepeatVisible.getText())) {
                     pwordInput = this.passwordVisible.getText();
                 }
-                else{
-                    info.setText("Username already taken or passwords don't match");
-                }
             }
             else
             {
                 if(this.unused && this.password.getText().contentEquals(this.repeatPassword.getText())) {
                     pwordInput = this.password.getText();
-                }
-                else{
-                    info.setText("Username already taken or passwords don't match");
                 }
             }
 
@@ -60,11 +51,14 @@ public class SignUpController {
                 pstmt.setString(1, username.getText());
                 pstmt.setString(2, pwordInput);
                 pstmt.execute();
-                Window current = this.info.getScene().getWindow();
+                Window current = this.username.getScene().getWindow();
                 current.hide();
             }
             else{
-                info.setText("Username already taken or passwords don't match");
+                info = new Alert(Alert.AlertType.INFORMATION);
+                info.setHeaderText("Somethings wrong with your user:");
+                info.setContentText("Username already taken or passwords don't match");
+                info.show();
             }
         }
         catch(SQLException err) {

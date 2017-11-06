@@ -12,12 +12,10 @@ import javafx.scene.input.MouseButton;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainController {
     @FXML Button create;
     @FXML Button save;
-    @FXML Button close;
     @FXML TextArea input;
     @FXML Label postText;
     @FXML ListView notes;
