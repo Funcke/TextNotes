@@ -5,7 +5,7 @@
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
     <stylesheets>
-       <URL value="@../styles/LogIn.css"/>
+       <URL value="@../styles/LogInBright.css"/>
     </stylesheets>
 
     <Label fx:id="header" GridPane.rowIndex="0" GridPane.columnIndex="0" />

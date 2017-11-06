@@ -12,15 +12,18 @@
           fx:controller="sample.SignUpController"
           prefHeight="300" prefWidth="275" alignment="center" hgap="10" vgap="10">
     <stylesheets>
-        <URL value="@../styles/LogIn.css" />
+        <URL value="@../styles/LogInBright.css" />
     </stylesheets>
     <Label text="Hey, Welcome!" GridPane.rowIndex="0"/>
     <Label text="Username" GridPane.rowIndex="1" />
     <TextField fx:id="username" GridPane.rowIndex="2"/>
     <Label text="Password" GridPane.rowIndex="3" />
-    <TextField fx:id="password" GridPane.rowIndex="4" />
+    <PasswordField fx:id="password" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="passwordVisible" GridPane.rowIndex="4" GridPane.columnIndex="0" visible="false"/>
     <Label text="Repeat Password" GridPane.rowIndex="5" />
-    <TextField fx:id="repeatPassword" GridPane.rowIndex="6" />
+    <PasswordField fx:id="repeatPassword" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <TextField fx:id="passwordRepeatVisible" GridPane.rowIndex="6" GridPane.columnIndex="0" visible="false"/>
     <Button fx:id="send" text="Submit" GridPane.rowIndex="7" GridPane.columnIndex="0" onAction="#submit" />
+    <CheckBox fx:id="showPassword" GridPane.rowIndex="7" GridPane.columnIndex="1" onAction="#viewPW"/>
     <Label fx:id="info" GridPane.rowIndex="8" />
 </GridPane>
