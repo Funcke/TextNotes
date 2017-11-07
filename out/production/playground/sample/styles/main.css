@@ -1,6 +1,5 @@
 .root {
     -fx-font-family: "Segoe UI Semibold";
-    -fx-font-size: 1.2em;
     -fx-text-fill: #fff;
 }
 
@@ -52,10 +51,6 @@ Label {
     -fx-background-color: #102027;
     -fx-text-fill: #fff;
     -fx-pref-width: 140.0;
-}
-
-#save:hover, #create:hover {
-    -fx-border-color: #6a0080;
 }
 
 #close {

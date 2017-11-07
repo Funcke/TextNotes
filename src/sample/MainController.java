@@ -1,30 +1,30 @@
 package sample;
 
-import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 
 public class MainController {
-    @FXML Button create;
-    @FXML Button save;
+    @FXML MenuItem create;
+    @FXML MenuItem save;
     @FXML TextArea input;
     @FXML Label postText;
     @FXML ListView notes;
 
-    private String name = "";
-    private Connection notesDB = null;
-    private ArrayList<Note> noteList = new ArrayList<>();
-    private boolean editMode = false;
-    private int id;
+    protected String name = "";
+    protected Connection notesDB = null;
+    protected ArrayList<Note> noteList = new ArrayList<>();
+    protected boolean editMode = false;
+    protected int id;
 
     public void init(String nm) {
         this.name = nm;
@@ -114,6 +114,7 @@ public class MainController {
         }
     }
 
+    @FXML
     public void save() {
         if(!this.input.getText().contentEquals("")){
             try {
@@ -137,6 +138,36 @@ public class MainController {
         this.input.setText("");
         this.initializeForm();
         this.stopInput();
+    }
+
+    /*
+    @FXML
+    public void setMode() {
+        if(this.nightMode.isSelected()) {
+            nightMode.getScene().getStylesheets().clear();
+            nightMode.getScene().getStylesheets().add(getClass().getResource("styles/main.css").toExternalForm());
+        }
+        else{
+            nightMode.getScene().getStylesheets().clear();
+            nightMode.getScene().getStylesheets().add(getClass().getResource("styles/mainBright.css").toExternalForm());
+        }
+    }*/
+
+    @FXML
+    public void logOff() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LogIn.fxml"));
+            Parent root = loader.load();
+            Stage view = (Stage) notes.getScene().getWindow();
+
+            view.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
+            view.setTitle("Log In");
+            view.setScene(new Scene(root, 300, 275));
+            view.show();
+        }
+        catch(IOException err) {
+            System.err.println("IOException");
+        }
     }
 
     public void create() {

@@ -1,5 +1,5 @@
 .root {
-    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-family: "Segoe UI";
 }
 #header {
     -fx-font-size: 1.5em;
@@ -7,26 +7,27 @@
 
 Button {
     -fx-text-fill: #000;
-    -fx-background-color: #f5f5f5;
-    -fx-border-color: #f5f5f5;
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #e0e0e0;
+}
+
+Button:hover {
+    -fx-border-color: #387002;
 }
 
 Label {
     -fx-text-fill: #000;
 }
-Button:hover {
-    -fx-border-color: #64dd17;
-}
 
 TextField, PasswordField {
-    -fx-background-color: #f5f5f5;
-    -fx-border-color: #f5f5f5;
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #e0e0e0;
     -fx-text-fill: #000;
 }
 TextField:focused, TextField:hover, PasswordField:focused, PasswordField:hover {
-    -fx-border-color: #64dd17;
+    -fx-border-color: #387002;
 }
 GridPane {
-    -fx-background-color: #f5f5f5;
-    -fx-text-fill: #f5f5f5;
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #e0e0e0;
 }
