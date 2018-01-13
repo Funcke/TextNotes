@@ -126,7 +126,7 @@ public class MainController {
     }
 
     @FXML
-    public void save() {
+    public void cmd_save() {
         if(!this.input.getText().contentEquals("")){
             try {
                 if (this.editMode) {
@@ -152,7 +152,7 @@ public class MainController {
     }
 
     @FXML
-    public void logOff() {
+    public void cmd_logOff() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LogIn.fxml"));
             Parent root = loader.load();
@@ -168,7 +168,7 @@ public class MainController {
         }
     }
 
-    public void create() {
+    public void cmd_create() {
         this.create.setVisible(false);
         this.save.setVisible(true);
         this.input.setVisible(true);

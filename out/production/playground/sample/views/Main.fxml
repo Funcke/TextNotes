@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="750.0" stylesheets="@../styles/main.css"
+<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="750.0"
           xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
 
     <VBox alignment="TOP_RIGHT" maxHeight="400.0" prefWidth="750.0" spacing="0">
@@ -10,9 +10,9 @@
         <MenuBar maxHeight="10.0" maxWidth="750.0">
 
             <Menu text="_File" mnemonicParsing="true">
-                <MenuItem fx:id="create" mnemonicParsing="true" onAction="#create" text="_New" styleClass="list-cell" accelerator="Ctrl+N"/>
-                <MenuItem fx:id="save" mnemonicParsing="true" onAction="#save" text="_Save" visible="false" styleClass="list-cell" accelerator="Ctrl+S"/>
-                <MenuItem fx:id="logoff" mnemonicParsing="true" onAction="#logOff" text="_Log Out" styleClass="list-cell" accelerator="Ctrl+O"/>
+                <MenuItem fx:id="create" mnemonicParsing="true" onAction="#cmd_create" text="_New" styleClass="list-cell" accelerator="Ctrl+N"/>
+                <MenuItem fx:id="save" mnemonicParsing="true" onAction="#cmd_save" text="_Save" visible="false" styleClass="list-cell" accelerator="Ctrl+S"/>
+                <MenuItem fx:id="logoff" mnemonicParsing="true" onAction="#cmd_logOff" text="_Log Out" styleClass="list-cell" accelerator="Ctrl+O"/>
 
             </Menu>
 
