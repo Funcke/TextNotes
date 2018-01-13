@@ -20,7 +20,8 @@
     <PasswordField fx:id="repeatPassword" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
     <TextField fx:id="passwordRepeatVisible" GridPane.rowIndex="6" GridPane.columnIndex="0" visible="false"/>
 
-    <Button fx:id="send" text="Submit" GridPane.rowIndex="7" GridPane.columnIndex="0" onAction="#submit" />
-    <CheckBox fx:id="showPassword" text="Show Password" GridPane.rowIndex="7" GridPane.columnIndex="1" onAction="#viewPW"/>
+    <CheckBox fx:id="showPassword" text="Show Password" GridPane.rowIndex="7" GridPane.columnIndex="0" onAction="#viewPW"/>
+    <Button fx:id="send" text="Submit" GridPane.rowIndex="8" GridPane.columnIndex="0" onAction="#submit" />
 
 </GridPane>
+

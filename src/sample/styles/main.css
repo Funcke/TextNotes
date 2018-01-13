@@ -8,6 +8,17 @@
     -fx-text-fill: #fff;
 }
 
+.menu-item {
+    -fx-background-color: #102027;
+    -fx-text-fill: #ffffff;
+}
+
+.menu-item:hover {
+    -fx-border-color: #6a0080;
+    -fx-border-width: 1%;
+    -fx-border-style: solid;
+}
+
 Label {
     -fx-text-fill: #fff;
 }
