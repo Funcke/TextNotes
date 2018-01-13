@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -16,7 +15,7 @@ public class Main extends Application {
         primaryStage = new Stage();
         primaryStage.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
         primaryStage.setTitle("Log In");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 300, 325));
         primaryStage.show();
     }
 

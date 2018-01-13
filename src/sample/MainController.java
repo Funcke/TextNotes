@@ -4,7 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
@@ -45,10 +48,18 @@ public class MainController {
                 System.err.println(err.getLocalizedMessage());
             }
             try {
-                String sql = "CREATE TABLE IF NOT EXISTS notes (\n"
-                        + "	id integer PRIMARY KEY,\n"
-                        + "	content text NOT NULL\n,"
-                        + " owner text NOT NULL\n"
+                String sql = "CREATE TABLE IF NOT EXISTS notebooks(\n"
+                        + "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n"
+                        + "owner VARCHAR NOT NULL,\n"
+                        + "name VARCHAR NOT NULL," +
+                        "FOREIGN KEY(owner) REFERENCES user(name));"
+                        + "CREATE TABLE IF NOT EXISTS notes (\n"
+                        + " id integer PRIMARY KEY,\n"
+                        + "content text NOT NULL\n,"
+                        + " owner VARCHAR NOT NULL,"
+                        + "notebook VARCHAR NOT NULL,"
+                        + "FOREIGN KEY(owner) REFERENCES user(username),"
+                        + "FOREIGN KEY (notebook) REFERENCES notebooks(name)"
                         + ");";
                 Statement stmt = notesDB.createStatement();
 
@@ -59,7 +70,7 @@ public class MainController {
         }
         //gets all notes  from db
         try{
-            PreparedStatement stmt = notesDB.prepareStatement("SELECT id, content FROM notes WHERE owner= ? ");
+            PreparedStatement stmt = notesDB.prepareStatement("SELECT id, content  FROM notes WHERE owner= ? ");
             stmt.setString(1, name);
             ResultSet res = stmt.executeQuery();
 
@@ -139,19 +150,6 @@ public class MainController {
         this.initializeForm();
         this.stopInput();
     }
-
-    /*
-    @FXML
-    public void setMode() {
-        if(this.nightMode.isSelected()) {
-            nightMode.getScene().getStylesheets().clear();
-            nightMode.getScene().getStylesheets().add(getClass().getResource("styles/main.css").toExternalForm());
-        }
-        else{
-            nightMode.getScene().getStylesheets().clear();
-            nightMode.getScene().getStylesheets().add(getClass().getResource("styles/mainBright.css").toExternalForm());
-        }
-    }*/
 
     @FXML
     public void logOff() {

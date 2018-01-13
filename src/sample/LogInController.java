@@ -35,7 +35,7 @@ public class LogInController {
     }
 
     @FXML
-    public void submit() {
+    public void cmd_submit() {
         String password = pWord.getText();
         String username = uName.getText();
         boolean userValid = false;
@@ -55,31 +55,28 @@ public class LogInController {
     }
 
     @FXML
-    public void signUp(){
+    public void cmd_signUp(){
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("views/signUp.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("views/SignUp.fxml"));
             Parent root = loader.load();
             Stage view = new Stage();
 
             view.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
             view.setTitle("New User");
-            view.setScene(new Scene(root, 300, 275));
+            view.setScene(new Scene(root, 325, 300));
             view.show();
 
             SignUpController sn = loader.getController();
             sn.setConnection(userDB);
         }
-        catch(IOException err) {
-            System.err.println(err.getMessage());
-        }
-        catch(Exception err) {
+        catch(Exception err ) {
             System.err.println(err.getMessage());
         }
     }
 
     @FXML
-    public void discard() {
+    public void cmd_discard() {
         Platform.exit();
     }
 

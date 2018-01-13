@@ -2,12 +2,10 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<?import java.net.URL?>
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="sample.SignUpController"
-          prefHeight="300" prefWidth="275" alignment="center" hgap="10" vgap="10">
+          prefHeight="325" prefWidth="300" alignment="center" hgap="10" vgap="10">
 
     <Label text="Hey, Welcome!" GridPane.rowIndex="0"/>
 

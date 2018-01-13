@@ -12,10 +12,13 @@
     <Label fx:id="pWordHead" GridPane.rowIndex="3" GridPane.columnIndex="0" />
     <PasswordField fx:id="pWord" GridPane.rowIndex="4" GridPane.columnIndex="0" />
 
-    <Button fx:id="submit" GridPane.rowIndex="5" text="Submit" onAction="#submit"/>
-    <Button fx:id="discard" GridPane.rowIndex="6" text="Discard" onAction="#discard"/>
+    <GridPane fx:id="controls" GridPane.rowIndex="5">
+        <Button fx:id="submit" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Submit" onAction="#cmd_submit"/>
+        <Button fx:id="discard" GridPane.rowIndex="0" GridPane.columnIndex="1" text="Discard" onAction="#cmd_discard"/>
+    </GridPane>
+
 
     <Label fx:id="footer" text="Don't have an Account?" GridPane.rowIndex="7" GridPane.columnIndex="0" />
-    <Button fx:id="signUp" text="signUp" onAction="#signUp" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    <Button fx:id="signUp" text="signUp" onAction="#cmd_signUp" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
 
 </GridPane>

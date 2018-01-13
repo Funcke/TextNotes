@@ -2,6 +2,7 @@ package sample;
 
 public class Note {
     private String content;
+    private String notebook;
     private int id;
 
     public Note(int id, String cont) {
@@ -16,4 +17,6 @@ public class Note {
     public String getContent() {
         return this.content;
     }
+
+    public String getNotebook() { return this.notebook; }
 }

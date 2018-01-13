@@ -2,49 +2,71 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import java.net.URL?>
-<GridPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.MainController"
-            prefHeight="400.0" prefWidth="750.0" alignment="CENTER">
+<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="750.0"
+          xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
 
-    <VBox prefWidth="750.0" maxHeight="400.0" alignment="TOP_RIGHT" spacing="0">
+    <VBox alignment="TOP_RIGHT" maxHeight="400.0" prefWidth="750.0" spacing="0">
 
-        <MenuBar maxWidth="750.0" maxHeight="10.0">
+        <MenuBar maxHeight="10.0" maxWidth="750.0">
 
-            <Menu text="_File">
-
-                <MenuItem mnemonicParsing="true" fx:id="create" text="_New" onAction="#create" />
-                <MenuItem mnemonicParsing="true" fx:id="save" text="_Save" onAction="#save" visible="false" />
-                <MenuItem mnemonicParsing="true" fx:id="logoff" text="_Log Out" onAction="#logOff"/>
+            <Menu text="_File" mnemonicParsing="true">
+                <MenuItem fx:id="create" mnemonicParsing="true" onAction="#create" text="_New" styleClass="list-cell" accelerator="Ctrl+N"/>
+                <MenuItem fx:id="save" mnemonicParsing="true" onAction="#save" text="_Save" visible="false" styleClass="list-cell" accelerator="Ctrl+S"/>
+                <MenuItem fx:id="logoff" mnemonicParsing="true" onAction="#logOff" text="_Log Out" styleClass="list-cell" accelerator="Ctrl+O"/>
 
             </Menu>
 
         </MenuBar>
 
-        <HBox maxWidth="750.0" maxHeight="390.0">
+        <HBox maxHeight="390.0" maxWidth="750.0">
 
-            <GridPane prefWidth="150.0" fx:id="menu" prefHeight="400.0" alignment="TOP_CENTER" hgap="10" vgap="10">
+            <GridPane fx:id="menu" alignment="TOP_CENTER" hgap="10" prefHeight="400.0" prefWidth="150.0" vgap="10">
 
-                <Label fx:id="menuText" prefWidth="150.0" text="Menu" GridPane.rowIndex="0" GridPane.columnIndex="0" textAlignment="CENTER"/>
+                <Label fx:id="menuText" prefWidth="150.0" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <columnConstraints>
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+            </rowConstraints>
 
             </GridPane>
-            <GridPane prefWidth="250.0" prefHeight="400.0" alignment="TOP_CENTER" hgap="10" vgap="10">
+            <GridPane alignment="TOP_CENTER" hgap="10" prefHeight="400.0" prefWidth="250.0" vgap="10">
 
-                <Label text="Posts" prefWidth="250" GridPane.rowIndex="0" GridPane.columnIndex="0" textAlignment="CENTER"/>
-                <ListView fx:id="notes" GridPane.rowIndex="1" prefWidth="240.0">
+                <Label prefWidth="250" text="Posts" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <ListView fx:id="notes" prefWidth="240.0" GridPane.rowIndex="1">
                 </ListView>
+            <columnConstraints>
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
 
             </GridPane>
-            <GridPane fx:id="pn_input" prefWidth="340.0" prefHeight="400.0" alignment="TOP_CENTER" hgap="10" vgap="10">
+            <GridPane fx:id="pn_input" alignment="TOP_CENTER" hgap="10" prefHeight="400.0" prefWidth="340.0" vgap="10">
 
-                <Label fx:id="postText" prefWidth="400.0" text="Note sth." GridPane.rowIndex="0" GridPane.columnIndex="0" textAlignment="CENTER"/>
-                <TextArea fx:id="input" prefWidth="340.0" prefHeight="360.0" GridPane.rowIndex="1" visible="false" wrapText="true"/>
+                <Label fx:id="postText" prefWidth="400.0" text="Note sth." textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextArea fx:id="input" prefHeight="360.0" prefWidth="340.0" visible="false" wrapText="true" GridPane.rowIndex="1" />
+            <columnConstraints>
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
 
             </GridPane>
 
         </HBox>
 
     </VBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
 
 </GridPane>
