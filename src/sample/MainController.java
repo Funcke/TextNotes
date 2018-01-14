@@ -4,10 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
@@ -22,6 +19,7 @@ public class MainController {
     @FXML TextArea input;
     @FXML Label postText;
     @FXML ListView notes;
+    @FXML TextField txt_newBook;
 
     protected String name = "";
     protected Connection notesDB = null;
@@ -48,18 +46,18 @@ public class MainController {
                 System.err.println(err.getLocalizedMessage());
             }
             try {
-                String sql = "CREATE TABLE IF NOT EXISTS notebooks(\n"
+                String sql = /*"CREATE TABLE IF NOT EXISTS notebooks(\n"
                         + "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\n"
                         + "owner VARCHAR NOT NULL,\n"
                         + "name VARCHAR NOT NULL," +
-                        "FOREIGN KEY(owner) REFERENCES user(name));"
-                        + "CREATE TABLE IF NOT EXISTS notes (\n"
+                        "FOREIGN KEY(owner) REFERENCES user(name));"*/
+                         "CREATE TABLE IF NOT EXISTS notes (\n"
                         + " id integer PRIMARY KEY,\n"
                         + "content text NOT NULL\n,"
                         + " owner VARCHAR NOT NULL,"
-                        + "notebook VARCHAR NOT NULL,"
-                        + "FOREIGN KEY(owner) REFERENCES user(username),"
-                        + "FOREIGN KEY (notebook) REFERENCES notebooks(name)"
+                        //+ "notebook VARCHAR NOT NULL,"
+                        + "FOREIGN KEY(owner) REFERENCES user(username)"
+                        //+ "FOREIGN KEY (notebook) REFERENCES notebooks(name)"
                         + ");";
                 Statement stmt = notesDB.createStatement();
 
@@ -125,6 +123,12 @@ public class MainController {
         }
     }
 
+    private void stopInput() {
+        this.save.setVisible(false);
+        this.create.setVisible(true);
+        this.input.setVisible(false);
+    }
+
     @FXML
     public void cmd_save() {
         if(!this.input.getText().contentEquals("")){
@@ -168,6 +172,7 @@ public class MainController {
         }
     }
 
+    @FXML
     public void cmd_create() {
         this.create.setVisible(false);
         this.save.setVisible(true);
@@ -175,9 +180,24 @@ public class MainController {
         this.input.requestFocus();
     }
 
-    private void stopInput() {
-        this.save.setVisible(false);
-        this.create.setVisible(true);
-        this.input.setVisible(false);
+    @FXML
+    public void cmd_activateNewNotebookField() {
+        txt_newBook.setVisible(true);
+        txt_newBook.setFocusTraversable(true);
+    }
+
+    @FXML
+    public void cmd_createNewNotebook() {
+        /*txt_newBook.getText().replaceAll(" ", "");
+        if(txt_newBook.getText().isEmpty() == false)
+            try {
+                PreparedStatement stmt = notesDB.prepareStatement("INSERT INTO notebooks(owner, name) VALUE(?,?);");
+
+
+            }catch(SQLException err) {
+                Alert error = new Alert(Alert.AlertType.ERROR);
+                error.setContentText(err.getMessage());
+            }
+            */
     }
 }

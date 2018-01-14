@@ -42,7 +42,7 @@ public class LogInController {
         if (userValid) {
             try {
                 this.open(username);
-            } catch (IOException e) {
+            } catch (IOException|SQLException e) {
                 System.err.println(e.getLocalizedMessage());
             }
         }
@@ -81,7 +81,8 @@ public class LogInController {
         Platform.exit();
     }
 
-    private void open(String name) throws IOException {
+    private void open(String name) throws IOException, SQLException {
+        userDB.close();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("views/Main.fxml"));
         Parent root = loader.load();
         Stage view = (Stage) signUp.getScene().getWindow();
@@ -97,7 +98,7 @@ public class LogInController {
 
     private boolean connectToDB() {
         try {
-            userDB = DriverManager.getConnection("jdbc:sqlite:user.db");
+            userDB = DriverManager.getConnection("jdbc:sqlite:posts.db");
             Statement stmt = userDB.createStatement();
 
             stmt.execute("CREATE TABLE IF NOT EXISTS users(\n"

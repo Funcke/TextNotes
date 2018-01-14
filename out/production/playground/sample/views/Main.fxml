@@ -13,7 +13,7 @@
                 <MenuItem fx:id="create" mnemonicParsing="true" onAction="#cmd_create" text="_New" styleClass="list-cell" accelerator="Ctrl+N"/>
                 <MenuItem fx:id="save" mnemonicParsing="true" onAction="#cmd_save" text="_Save" visible="false" styleClass="list-cell" accelerator="Ctrl+S"/>
                 <MenuItem fx:id="logoff" mnemonicParsing="true" onAction="#cmd_logOff" text="_Log Out" styleClass="list-cell" accelerator="Ctrl+O"/>
-
+                <MenuItem fx:id="newNotebook" mnemonicParsing="true" onAction="#cmd_activateNewNotebookField" text="_New Notebook" styleClass="list-cell" accelerator="Ctrl+Shift+N"/>
             </Menu>
 
         </MenuBar>
@@ -23,6 +23,10 @@
             <GridPane fx:id="menu" alignment="TOP_CENTER" hgap="10" prefHeight="400.0" prefWidth="150.0" vgap="10">
 
                 <Label fx:id="menuText" prefWidth="150.0" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <GridPane GridPane.rowIndex="1">
+
+                </GridPane>
+                <TextField fx:id="txt_newBook" GridPane.rowIndex="2" visible="false" onAction="#cmd_createNewNotebook"/>
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>

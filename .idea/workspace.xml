@@ -7,9 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/playground/sample/MainController.class" afterPath="$PROJECT_DIR$/out/production/playground/sample/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/playground/sample/views/Main.fxml" afterPath="$PROJECT_DIR$/out/production/playground/sample/views/Main.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/LogInController.java" afterPath="$PROJECT_DIR$/src/sample/LogInController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MainController.java" afterPath="$PROJECT_DIR$/src/sample/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/views/LogIn.fxml" afterPath="$PROJECT_DIR$/src/sample/views/LogIn.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/views/Main.fxml" afterPath="$PROJECT_DIR$/src/sample/views/Main.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -71,30 +73,23 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="170" column="20" lean-forward="false" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+            <state relative-caret-position="3149">
+              <caret line="200" column="14" lean-forward="false" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1515857636563" expanded="true" signature="1493:1784" ph="CREATE TABLE... IF" />
-                <marker date="1515857636563" expanded="true" signature="1814:2010" ph="CREATE TABLE... IF" />
-                <marker date="1515857636563" expanded="true" signature="1814:2140" ph="CREATE TABLE... IF" />
-                <marker date="1515857636563" expanded="true" signature="1814:2248" ph="CREATE TABLE... IF" />
-                <marker date="1515857636563" expanded="true" signature="2584:2629" ph="SELECT id, c... notes" />
-                <marker date="1515857636563" expanded="true" signature="3865:3908" ph="DELETE FROM " />
-                <marker date="1515857636563" expanded="true" signature="5124:5165" ph="UPDATE notes... " />
-                <marker date="1515857636563" expanded="true" signature="5447:5494" ph="INSERT INTO notes... " />
-                <marker date="1515857636563" expanded="true" signature="6612:6620" ph="{...}" />
+                <marker date="1515937121015" expanded="true" signature="1410:1701" ph="CREATE TABLE... IF" />
+                <marker date="1515937121015" expanded="true" signature="1732:1766" ph="CREATE TABLE... IF" />
+                <marker date="1515937121015" expanded="true" signature="1732:1928" ph="CREATE TABLE... IF" />
+                <marker date="1515937121015" expanded="true" signature="1732:1929" ph="CREATE TABLE... IF" />
+                <marker date="1515937121015" expanded="true" signature="1732:2059" ph="CREATE TABLE... IF" />
+                <marker date="1515937121015" expanded="true" signature="1732:2169" ph="CREATE TABLE... IF" />
+                <marker date="1515937121015" expanded="true" signature="2505:2550" ph="SELECT id, c... notes" />
+                <marker date="1515937121015" expanded="true" signature="3786:3829" ph="DELETE FROM " />
+                <marker date="1515937121015" expanded="true" signature="5196:5237" ph="UPDATE notes... " />
+                <marker date="1515937121015" expanded="true" signature="5519:5566" ph="INSERT INTO notes... " />
+                <marker date="1515937121015" expanded="true" signature="6694:6702" ph="{...}" />
+                <marker date="1515937121015" expanded="true" signature="7098:7143" ph="INSERT INTO notebooks... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -102,13 +97,13 @@
       <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/LogInController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            <state relative-caret-position="-171">
+              <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
               <folding>
-                <marker date="1515857235904" expanded="true" signature="2899:3136" ph="CREATE TABLE... IF" />
-                <marker date="1515857235904" expanded="true" signature="2899:3139" ph="CREATE TABLE... IF" />
-                <marker date="1515857235904" expanded="true" signature="2936:3136" ph="CREATE TABLE... IF" />
-                <marker date="1515857235904" expanded="true" signature="3473:3509" ph="SELECT usern... users" />
+                <marker date="1515937250068" expanded="true" signature="2951:3188" ph="CREATE TABLE... IF" />
+                <marker date="1515937250068" expanded="true" signature="2951:3191" ph="CREATE TABLE... IF" />
+                <marker date="1515937250068" expanded="true" signature="2988:3188" ph="CREATE TABLE... IF" />
+                <marker date="1515937250068" expanded="true" signature="3525:3561" ph="SELECT usern... users" />
               </folding>
             </state>
           </provider>
@@ -117,7 +112,7 @@
       <file leaf-file-name="SignUpController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/SignUpController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
+            <state relative-caret-position="-967">
               <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <marker date="1509960630424" expanded="true" signature="695:721" ph="SELECT usern... users" />
@@ -151,52 +146,42 @@
       </file>
       <file leaf-file-name="SignUp.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/views/SignUp.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
               <caret line="20" column="109" lean-forward="false" selection-start-line="20" selection-start-column="109" selection-end-line="20" selection-end-column="109" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-              <folding>
-                <marker date="1515857636539" expanded="true" signature="488:522" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/styles/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="15" column="108" lean-forward="false" selection-start-line="15" selection-start-column="108" selection-end-line="15" selection-end-column="108" />
+              <folding>
+                <marker date="1515861004651" expanded="true" signature="488:522" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="LogIn.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -205,9 +190,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -256,10 +241,12 @@
         <option value="$PROJECT_DIR$/src/sample/views/signUp.fxml" />
         <option value="$PROJECT_DIR$/src/sample/styles/main.css" />
         <option value="$PROJECT_DIR$/src/sample/views/SignUp.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/LogInController.java" />
         <option value="$PROJECT_DIR$/src/sample/views/LogIn.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/views/newNotebook.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/components/KeyListenerTextField.java" />
         <option value="$PROJECT_DIR$/src/sample/views/Main.fxml" />
         <option value="$PROJECT_DIR$/src/sample/MainController.java" />
+        <option value="$PROJECT_DIR$/src/sample/LogInController.java" />
       </list>
     </option>
   </component>
@@ -294,7 +281,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,27 +307,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TextNotes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TextNotes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TextNotes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TextNotes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -595,6 +568,8 @@
       <workItem from="1514573107140" duration="55000" />
       <workItem from="1515840047877" duration="3544000" />
       <workItem from="1515850308773" duration="5493000" />
+      <workItem from="1515858761163" duration="3727000" />
+      <workItem from="1515936979699" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="Added data access and styled main Window">
       <created>1509105946466</created>
@@ -663,7 +638,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121514000" />
+    <option name="totallyTimeSpent" value="125641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -671,25 +646,26 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32731378" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21350762" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21350762" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1515625" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278867" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39841986" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39841986" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -700,14 +676,13 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -732,7 +707,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1515625" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278867" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -769,41 +744,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/views/SignUp.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="110" lean-forward="false" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="110" />
-          <folding>
-            <marker date="1515857636539" expanded="true" signature="488:522" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Note.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -818,15 +758,18 @@
           <caret line="68" column="82" lean-forward="false" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1515857636563" expanded="true" signature="1493:1784" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2010" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2140" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2248" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="2584:2629" ph="SELECT id, c... notes" />
-            <marker date="1515857636563" expanded="true" signature="3865:3908" ph="DELETE FROM " />
-            <marker date="1515857636563" expanded="true" signature="5124:5165" ph="UPDATE notes... " />
-            <marker date="1515857636563" expanded="true" signature="5447:5494" ph="INSERT INTO notes... " />
-            <marker date="1515857636563" expanded="true" signature="6612:6620" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="1410:1701" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1766" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1928" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1929" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2059" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2169" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="2505:2550" ph="SELECT id, c... notes" />
+            <marker date="1515937121015" expanded="true" signature="3786:3829" ph="DELETE FROM " />
+            <marker date="1515937121015" expanded="true" signature="5196:5237" ph="UPDATE notes... " />
+            <marker date="1515937121015" expanded="true" signature="5519:5566" ph="INSERT INTO notes... " />
+            <marker date="1515937121015" expanded="true" signature="6694:6702" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="7098:7143" ph="INSERT INTO notebooks... " />
           </folding>
         </state>
       </provider>
@@ -836,10 +779,10 @@
         <state relative-caret-position="2975">
           <caret line="119" column="68" lean-forward="false" selection-start-line="119" selection-start-column="68" selection-end-line="119" selection-end-column="68" />
           <folding>
-            <marker date="1515857235904" expanded="true" signature="2899:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2899:3139" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2936:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="3473:3509" ph="SELECT usern... users" />
+            <marker date="1515937250068" expanded="true" signature="2951:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2951:3191" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2988:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="3525:3561" ph="SELECT usern... users" />
           </folding>
         </state>
       </provider>
@@ -865,38 +808,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/views/SignUp.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="16" column="110" lean-forward="false" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="110" />
           <folding>
-            <marker date="1515857636539" expanded="true" signature="488:522" ph="{...}" />
+            <marker date="1515861004651" expanded="true" signature="488:522" ph="{...}" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Note.java">
@@ -913,15 +856,18 @@
           <caret line="68" column="82" lean-forward="false" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1515857636563" expanded="true" signature="1493:1784" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2010" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2140" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2248" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="2584:2629" ph="SELECT id, c... notes" />
-            <marker date="1515857636563" expanded="true" signature="3865:3908" ph="DELETE FROM " />
-            <marker date="1515857636563" expanded="true" signature="5124:5165" ph="UPDATE notes... " />
-            <marker date="1515857636563" expanded="true" signature="5447:5494" ph="INSERT INTO notes... " />
-            <marker date="1515857636563" expanded="true" signature="6612:6620" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="1410:1701" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1766" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1928" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1929" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2059" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2169" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="2505:2550" ph="SELECT id, c... notes" />
+            <marker date="1515937121015" expanded="true" signature="3786:3829" ph="DELETE FROM " />
+            <marker date="1515937121015" expanded="true" signature="5196:5237" ph="UPDATE notes... " />
+            <marker date="1515937121015" expanded="true" signature="5519:5566" ph="INSERT INTO notes... " />
+            <marker date="1515937121015" expanded="true" signature="6694:6702" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="7098:7143" ph="INSERT INTO notebooks... " />
           </folding>
         </state>
       </provider>
@@ -931,10 +877,10 @@
         <state relative-caret-position="2975">
           <caret line="119" column="68" lean-forward="false" selection-start-line="119" selection-start-column="68" selection-end-line="119" selection-end-column="68" />
           <folding>
-            <marker date="1515857235904" expanded="true" signature="2899:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2899:3139" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2936:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="3473:3509" ph="SELECT usern... users" />
+            <marker date="1515937250068" expanded="true" signature="2951:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2951:3191" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2988:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="3525:3561" ph="SELECT usern... users" />
           </folding>
         </state>
       </provider>
@@ -960,38 +906,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/views/SignUp.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="16" column="110" lean-forward="false" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="110" />
           <folding>
-            <marker date="1515857636539" expanded="true" signature="488:522" ph="{...}" />
+            <marker date="1515861004651" expanded="true" signature="488:522" ph="{...}" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Note.java">
@@ -1008,15 +954,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1515857636563" expanded="true" signature="1493:1784" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2010" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2140" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2248" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="2584:2629" ph="SELECT id, c... notes" />
-            <marker date="1515857636563" expanded="true" signature="3865:3908" ph="DELETE FROM " />
-            <marker date="1515857636563" expanded="true" signature="5124:5165" ph="UPDATE notes... " />
-            <marker date="1515857636563" expanded="true" signature="5447:5494" ph="INSERT INTO notes... " />
-            <marker date="1515857636563" expanded="true" signature="6612:6620" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="1410:1701" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1766" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1928" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1929" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2059" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2169" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="2505:2550" ph="SELECT id, c... notes" />
+            <marker date="1515937121015" expanded="true" signature="3786:3829" ph="DELETE FROM " />
+            <marker date="1515937121015" expanded="true" signature="5196:5237" ph="UPDATE notes... " />
+            <marker date="1515937121015" expanded="true" signature="5519:5566" ph="INSERT INTO notes... " />
+            <marker date="1515937121015" expanded="true" signature="6694:6702" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="7098:7143" ph="INSERT INTO notebooks... " />
           </folding>
         </state>
       </provider>
@@ -1026,10 +975,10 @@
         <state relative-caret-position="2600">
           <caret line="119" column="68" lean-forward="true" selection-start-line="119" selection-start-column="68" selection-end-line="119" selection-end-column="68" />
           <folding>
-            <marker date="1515857235904" expanded="true" signature="2899:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2899:3139" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2936:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="3473:3509" ph="SELECT usern... users" />
+            <marker date="1515937250068" expanded="true" signature="2951:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2951:3191" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2988:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="3525:3561" ph="SELECT usern... users" />
           </folding>
         </state>
       </provider>
@@ -1063,38 +1012,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/views/SignUp.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="16" column="110" lean-forward="false" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="110" />
           <folding>
-            <marker date="1515857636539" expanded="true" signature="488:522" ph="{...}" />
+            <marker date="1515861004651" expanded="true" signature="488:522" ph="{...}" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
@@ -1103,15 +1052,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1515857636563" expanded="true" signature="1493:1784" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2010" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2140" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2248" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="2584:2629" ph="SELECT id, c... notes" />
-            <marker date="1515857636563" expanded="true" signature="3865:3908" ph="DELETE FROM " />
-            <marker date="1515857636563" expanded="true" signature="5124:5165" ph="UPDATE notes... " />
-            <marker date="1515857636563" expanded="true" signature="5447:5494" ph="INSERT INTO notes... " />
-            <marker date="1515857636563" expanded="true" signature="6612:6620" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="1410:1701" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1766" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1928" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1929" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2059" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2169" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="2505:2550" ph="SELECT id, c... notes" />
+            <marker date="1515937121015" expanded="true" signature="3786:3829" ph="DELETE FROM " />
+            <marker date="1515937121015" expanded="true" signature="5196:5237" ph="UPDATE notes... " />
+            <marker date="1515937121015" expanded="true" signature="5519:5566" ph="INSERT INTO notes... " />
+            <marker date="1515937121015" expanded="true" signature="6694:6702" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="7098:7143" ph="INSERT INTO notebooks... " />
           </folding>
         </state>
       </provider>
@@ -1121,10 +1073,10 @@
         <state relative-caret-position="2350">
           <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
           <folding>
-            <marker date="1515857235904" expanded="true" signature="2899:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2899:3139" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2936:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="3473:3509" ph="SELECT usern... users" />
+            <marker date="1515937250068" expanded="true" signature="2951:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2951:3191" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2988:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="3525:3561" ph="SELECT usern... users" />
           </folding>
         </state>
       </provider>
@@ -1153,15 +1105,18 @@
           <caret line="166" column="24" lean-forward="false" selection-start-line="166" selection-start-column="24" selection-end-line="166" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1515857636563" expanded="true" signature="1493:1784" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2010" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2140" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2248" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="2584:2629" ph="SELECT id, c... notes" />
-            <marker date="1515857636563" expanded="true" signature="3865:3908" ph="DELETE FROM " />
-            <marker date="1515857636563" expanded="true" signature="5124:5165" ph="UPDATE notes... " />
-            <marker date="1515857636563" expanded="true" signature="5447:5494" ph="INSERT INTO notes... " />
-            <marker date="1515857636563" expanded="true" signature="6612:6620" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="1410:1701" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1766" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1928" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1929" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2059" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2169" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="2505:2550" ph="SELECT id, c... notes" />
+            <marker date="1515937121015" expanded="true" signature="3786:3829" ph="DELETE FROM " />
+            <marker date="1515937121015" expanded="true" signature="5196:5237" ph="UPDATE notes... " />
+            <marker date="1515937121015" expanded="true" signature="5519:5566" ph="INSERT INTO notes... " />
+            <marker date="1515937121015" expanded="true" signature="6694:6702" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="7098:7143" ph="INSERT INTO notebooks... " />
           </folding>
         </state>
       </provider>
@@ -1195,38 +1150,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/views/SignUp.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="17" column="114" lean-forward="false" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
           <folding>
-            <marker date="1515857636539" expanded="true" signature="488:522" ph="{...}" />
+            <marker date="1515861004651" expanded="true" signature="488:522" ph="{...}" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/LogInController.java">
@@ -1234,10 +1189,10 @@
         <state relative-caret-position="2725">
           <caret line="109" column="24" lean-forward="false" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
           <folding>
-            <marker date="1515857235904" expanded="true" signature="2899:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2899:3139" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2936:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="3473:3509" ph="SELECT usern... users" />
+            <marker date="1515937250068" expanded="true" signature="2951:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2951:3191" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2988:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="3525:3561" ph="SELECT usern... users" />
           </folding>
         </state>
       </provider>
@@ -1254,21 +1209,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
+        <state relative-caret-position="252">
           <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/views/SignUp.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="109" lean-forward="false" selection-start-line="20" selection-start-column="109" selection-end-line="20" selection-end-column="109" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Note.java">
@@ -1279,6 +1251,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/NewNotebookController.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/views/newNotebook.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/sample/components/KeyListenerTextField.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1291,7 +1266,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SignUpController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
+        <state relative-caret-position="-967">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <marker date="1509960630424" expanded="true" signature="695:721" ph="SELECT usern... users" />
@@ -1300,67 +1275,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/LogInController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        <state relative-caret-position="3149">
+          <caret line="200" column="14" lean-forward="false" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="14" />
           <folding>
-            <marker date="1515857235904" expanded="true" signature="2899:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2899:3139" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="2936:3136" ph="CREATE TABLE... IF" />
-            <marker date="1515857235904" expanded="true" signature="3473:3509" ph="SELECT usern... users" />
+            <element signature="imports" expanded="true" />
+            <marker date="1515937121015" expanded="true" signature="1410:1701" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1766" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1928" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:1929" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2059" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="1732:2169" ph="CREATE TABLE... IF" />
+            <marker date="1515937121015" expanded="true" signature="2505:2550" ph="SELECT id, c... notes" />
+            <marker date="1515937121015" expanded="true" signature="3786:3829" ph="DELETE FROM " />
+            <marker date="1515937121015" expanded="true" signature="5196:5237" ph="UPDATE notes... " />
+            <marker date="1515937121015" expanded="true" signature="5519:5566" ph="INSERT INTO notes... " />
+            <marker date="1515937121015" expanded="true" signature="6694:6702" ph="{...}" />
+            <marker date="1515937121015" expanded="true" signature="7098:7143" ph="INSERT INTO notebooks... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/views/LogIn.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-          <folding />
+        <state relative-caret-position="-171">
+          <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+          <folding>
+            <marker date="1515937250068" expanded="true" signature="2951:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2951:3191" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="2988:3188" ph="CREATE TABLE... IF" />
+            <marker date="1515937250068" expanded="true" signature="3525:3561" ph="SELECT usern... users" />
+          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <marker date="1515857636539" expanded="true" signature="488:522" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="170" column="20" lean-forward="false" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="15" column="108" lean-forward="false" selection-start-line="15" selection-start-column="108" selection-end-line="15" selection-end-column="108" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1515857636563" expanded="true" signature="1493:1784" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2010" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2140" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="1814:2248" ph="CREATE TABLE... IF" />
-            <marker date="1515857636563" expanded="true" signature="2584:2629" ph="SELECT id, c... notes" />
-            <marker date="1515857636563" expanded="true" signature="3865:3908" ph="DELETE FROM " />
-            <marker date="1515857636563" expanded="true" signature="5124:5165" ph="UPDATE notes... " />
-            <marker date="1515857636563" expanded="true" signature="5447:5494" ph="INSERT INTO notes... " />
-            <marker date="1515857636563" expanded="true" signature="6612:6620" ph="{...}" />
+            <marker date="1515861004651" expanded="true" signature="488:522" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
