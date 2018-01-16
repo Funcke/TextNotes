@@ -108,7 +108,7 @@ public class LogInController {
                     + ");");
             return true;
         } catch (SQLException err) {
-            System.err.println(err.getMessage());
+            System.err.println(err.getMessage() + "111");
         }
         return false;
     }

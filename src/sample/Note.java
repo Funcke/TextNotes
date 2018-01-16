@@ -1,5 +1,9 @@
 package sample;
 
+/*
+ * @author Jonas Funcke
+ * @use Represents a note object
+ */
 public class Note {
     private String content;
     private String notebook;
