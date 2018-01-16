@@ -1,10 +1,16 @@
 # TextNotes
 TextNotes is a Note app to view and manage small notes.
+## Anouncement: Version 2.0.0 is out !!!
+
+TextNotes reached Version 2. We are very happy to anounce, that we finally arrived at a point where we left our old layout and interface functionality behind and created a whole new TextNotes feeling.
+
+In some days our first -msi will be released, wich should make the usage of our wonderful app more convenient.
+
 ## Requirements
+
 Java SE Version 8 or newer.
 
 ## Future
-* Dividing notes into notebooks
 * Syncing Notes with the Server
 * note sharing
 * calendar integration
@@ -15,3 +21,4 @@ Java SE Version 8 or newer.
 ## Achievements
 * saving user and posts in DB
 * Dividing notes by owner
+* Creating Notebooks and dividing Notes in them

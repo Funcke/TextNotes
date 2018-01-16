@@ -65,7 +65,7 @@ public class LogInController {
 
             view.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
             view.setTitle("New User");
-            view.setScene(new Scene(root, 550, 700));
+            view.setScene(new Scene(root, 275, 350));
             view.show();
 
             SignUpController sn = loader.getController();
@@ -90,7 +90,7 @@ public class LogInController {
 
         controller.init(name);
         view.setTitle("TextNotes");
-        view.setScene(new Scene(root, 1500, 800));
+        view.setScene(new Scene(root, 1125, 600));
         view.setResizable(false);
         view.sizeToScene();
         view.show();
