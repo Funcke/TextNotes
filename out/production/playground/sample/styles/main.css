@@ -2,7 +2,7 @@
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: #fff;
 }
-
+/*
 #menu {
     -fx-background-color: #102027;
     -fx-text-fill: #fff;
@@ -100,4 +100,4 @@ ListView {
 
 TextArea:focused {
     -fx-background-color: #102027;
-}
+}*/

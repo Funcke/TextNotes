@@ -71,14 +71,12 @@ public class MainController {
                 System.err.println(err.getLocalizedMessage());
             }
             try {
-                String sql = "CREATE TABLE IF NOT EXISTS notebooks(\n"
+                Statement stmt = notesDB.createStatement();
+                stmt.execute("CREATE TABLE IF NOT EXISTS notebooks(\n"
                         + "id INTEGER PRIMARY KEY AUTOINCREMENT,\n"
                         + "owner VARCHAR NOT NULL,\n"
                         + "name VARCHAR NOT NULL,"
-                        + "FOREIGN KEY(owner) REFERENCES user(name));";
-                Statement stmt = notesDB.createStatement();
-
-                stmt.execute(sql);
+                        + "FOREIGN KEY(owner) REFERENCES user(name));");
                 stmt.execute("CREATE TABLE IF NOT EXISTS notes (\n"
                         + " id integer PRIMARY KEY,\n"
                         + "content text NOT NULL,"
@@ -88,7 +86,7 @@ public class MainController {
                         + "FOREIGN KEY (notebook) REFERENCES notebooks(name)"
                         + ");");
             } catch (SQLException err) {
-                System.err.println(err.getMessage() + "49");
+                System.err.println(err.getMessage() + "88");
             }
         }
         this.initializeNotes();
@@ -195,7 +193,6 @@ public class MainController {
                 gp_notebooks.add(newBook, 0, row);
                 row++;
             }
-            System.err.println(row);
         }catch(SQLException err) {
             System.err.println(err.getMessage());
         }
@@ -217,8 +214,10 @@ public class MainController {
      */
     @FXML
     public void cmd_save() {
-        if(!this.input.getText().contentEquals("")){
+        if(!this.input.getText().contentEquals("") ){
             try {
+                if(this.notebook.equals(""))
+                    throw new NoNotebookSelectedException();
                 if (this.editMode) {
                     PreparedStatement stmt = notesDB.prepareStatement("UPDATE notes SET content = ? WHERE id = ?;");
 
@@ -233,8 +232,10 @@ public class MainController {
                     stmt.setString(3, this.notebook);
                     stmt.execute();
                 }
-            } catch (SQLException err) {
-                System.err.println(err.getMessage());
+            } catch (SQLException|NoNotebookSelectedException err) {
+                Alert error = new Alert(Alert.AlertType.ERROR);
+                error.setContentText(err.getMessage());
+                error.show();
             }
         }
         this.input.setText("");
@@ -306,5 +307,12 @@ public class MainController {
             }
         }
         txt_newBook.setVisible(false);
+    }
+
+    @FXML
+    public void cmd_showAll() {
+        this.notebook = "";
+        this.initializeNotes();
+        this.initializeNotebooks();
     }
 }
