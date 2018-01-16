@@ -216,8 +216,7 @@ public class MainController {
     public void cmd_save() {
         if(!this.input.getText().contentEquals("") ){
             try {
-                if(this.notebook.equals(""))
-                    throw new NoNotebookSelectedException();
+
                 if (this.editMode) {
                     PreparedStatement stmt = notesDB.prepareStatement("UPDATE notes SET content = ? WHERE id = ?;");
 
@@ -226,6 +225,8 @@ public class MainController {
                     stmt.execute();
                     this.editMode = false;
                 } else {
+                    if(this.notebook.equals(""))
+                        throw new NoNotebookSelectedException();
                     PreparedStatement stmt = notesDB.prepareStatement("INSERT INTO notes (content, owner, notebook) VALUES(?, ?, ?)");
                     stmt.setString(1, input.getText());
                     stmt.setString(2, this.name);
