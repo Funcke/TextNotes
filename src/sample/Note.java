@@ -1,12 +1,15 @@
 package sample;
 
+import java.util.Date;
+
 /*
  * @author Jonas Funcke
  * @use Represents a note object
  */
 public class Note {
     private String content;
-    private String notebook;
+    private Date creation;
+    private Date modification;
     private int id;
 
     public Note(int id, String cont) {
@@ -22,5 +25,11 @@ public class Note {
         return this.content;
     }
 
-    public String getNotebook() { return this.notebook; }
+    public String getCreation() {
+        return creation.toString();
+    }
+
+    public String getModification() {
+        return this.modification.toString();
+    }
 }
