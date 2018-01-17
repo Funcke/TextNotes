@@ -246,6 +246,7 @@ public class MainController {
             }
         }
         this.input.setText("");
+        this.createdDate.setText("");
         this.initializeNotes();
         this.stopInput();
     }
