@@ -9,7 +9,7 @@
     <TextField fx:id="uName" GridPane.rowIndex="2" GridPane.columnIndex="0" />
 
     <Label fx:id="pWordHead" GridPane.rowIndex="3" GridPane.columnIndex="0" />
-    <PasswordField fx:id="pWord" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+    <PasswordField fx:id="pWord" GridPane.rowIndex="4" GridPane.columnIndex="0" onAction="#cmd_submit"/>
 
     <GridPane fx:id="controls" GridPane.rowIndex="5">
         <Button fx:id="submit" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Submit" onAction="#cmd_submit" />

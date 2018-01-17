@@ -93,6 +93,7 @@ public class LogInController {
         view.setScene(new Scene(root, 1125, 600));
         view.setResizable(false);
         view.sizeToScene();
+        view.centerOnScreen();
         view.show();
     }
 

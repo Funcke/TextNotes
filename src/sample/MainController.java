@@ -9,10 +9,12 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import sample.exceptions.NoNotebookSelectedException;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /*
  * @author Jonas Funcke
@@ -23,6 +25,7 @@ public class MainController {
     @FXML MenuItem save;
     @FXML TextArea input;
     @FXML Label postText;
+    @FXML Label createdDate;
     @FXML ListView notes;
     @FXML TextField txt_newBook;
     @FXML GridPane gp_notebooks;
@@ -82,6 +85,7 @@ public class MainController {
                         + "content text NOT NULL,"
                         + " owner VARCHAR NOT NULL,"
                         + "notebook VARCHAR NOT NULL,"
+                        + "created_at VARCHAR NOT NULL,"
                         + "FOREIGN KEY(owner) REFERENCES user(username),"
                         + "FOREIGN KEY (notebook) REFERENCES notebooks(name)"
                         + ");");
@@ -106,9 +110,9 @@ public class MainController {
         try {
             PreparedStatement stmt;
             if(this.notebook.equals("")) {
-                stmt = notesDB.prepareStatement("SELECT id, content  FROM notes WHERE owner= ? ");
+                stmt = notesDB.prepareStatement("SELECT id, content, created_at  FROM notes WHERE owner= ? ");
             } else{
-                stmt = notesDB.prepareStatement("SELECT id, content  FROM notes WHERE owner= ? AND notebook = ?");
+                stmt = notesDB.prepareStatement("SELECT id, content, created_at  FROM notes WHERE owner= ? AND notebook = ?");
                 stmt.setString(2, this.notebook);
             }
 
@@ -118,7 +122,7 @@ public class MainController {
             noteList.clear();
 
             while (res.next()) {
-                noteList.add(new Note(res.getInt("id"), res.getString("content")));
+                noteList.add(new Note(res.getInt("id"), res.getString("content"), res.getString("created_at")));
             }
 
             for (Note n : noteList) {
@@ -130,13 +134,13 @@ public class MainController {
                     if (mouseEvent.getButton() == MouseButton.PRIMARY) {
                         input.setVisible(true);
                         input.setText(n.getContent());
+                        createdDate.setText(n.getCreation());
                         create.setVisible(false);
                         save.setVisible(true);
 
                         this.editMode = true;
                         this.id = n.getId();
-                    } else //event on right click
-                        if (mouseEvent.getButton() == MouseButton.SECONDARY) {
+                    } else if (mouseEvent.getButton() == MouseButton.SECONDARY) {
                             if (!this.editMode) {
                                 StringBuilder sb = new StringBuilder();
 
@@ -218,19 +222,21 @@ public class MainController {
             try {
 
                 if (this.editMode) {
-                    PreparedStatement stmt = notesDB.prepareStatement("UPDATE notes SET content = ? WHERE id = ?;");
+                    PreparedStatement stmt = notesDB.prepareStatement("UPDATE notes SET content = ?, created_at = ? WHERE id = ?;");
 
                     stmt.setString(1, input.getText());
-                    stmt.setInt(2, this.id);
+                    stmt.setString(2, Calendar.getInstance().getTime().toString());
+                    stmt.setInt(3, this.id);
                     stmt.execute();
                     this.editMode = false;
                 } else {
                     if(this.notebook.equals(""))
                         throw new NoNotebookSelectedException();
-                    PreparedStatement stmt = notesDB.prepareStatement("INSERT INTO notes (content, owner, notebook) VALUES(?, ?, ?)");
+                    PreparedStatement stmt = notesDB.prepareStatement("INSERT INTO notes (content, owner, notebook, created_at) VALUES(?, ?, ?, ?)");
                     stmt.setString(1, input.getText());
                     stmt.setString(2, this.name);
                     stmt.setString(3, this.notebook);
+                    stmt.setString(4, Calendar.getInstance().getTime().toString());
                     stmt.execute();
                 }
             } catch (SQLException|NoNotebookSelectedException err) {
@@ -278,6 +284,7 @@ public class MainController {
      */
     @FXML
     public void cmd_create() {
+        this.createdDate.setText("");
         this.create.setVisible(false);
         this.save.setVisible(true);
         this.input.setVisible(true);

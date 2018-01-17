@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<GridPane alignment="CENTER" prefHeight="600.0" prefWidth="1125.0" stylesheets="@../styles/main.css"
-          xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="CENTER" prefHeight="600.0" prefWidth="1125.0" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
 
     <VBox alignment="TOP_RIGHT" maxHeight="600.0" prefWidth="1125.0" spacing="0">
 
         <MenuBar maxHeight="20.0" maxWidth="1125.0">
 
-            <Menu text="_File" mnemonicParsing="true">
-                <MenuItem fx:id="create" mnemonicParsing="true" onAction="#cmd_create" text="_New" styleClass="list-cell" accelerator="Ctrl+N"/>
-                <MenuItem fx:id="save" mnemonicParsing="true" onAction="#cmd_save" text="_Save" visible="false" styleClass="list-cell" accelerator="Ctrl+S"/>
-                <MenuItem fx:id="newNotebook" mnemonicParsing="true" onAction="#cmd_activateNewNotebookField" text="_New Notebook" styleClass="list-cell" accelerator="Ctrl+Shift+N"/>
-                <MenuItem fx:id="logoff" mnemonicParsing="true" onAction="#cmd_logOff" text="_Log Out" styleClass="list-cell" accelerator="Ctrl+O"/>
+            <Menu mnemonicParsing="true" text="_File">
+                <MenuItem fx:id="create" accelerator="Ctrl+N" mnemonicParsing="true" onAction="#cmd_create" styleClass="list-cell" text="_New" />
+                <MenuItem fx:id="save" accelerator="Ctrl+S" mnemonicParsing="true" onAction="#cmd_save" styleClass="list-cell" text="_Save" visible="false" />
+                <MenuItem fx:id="newNotebook" accelerator="Ctrl+Shift+N" mnemonicParsing="true" onAction="#cmd_activateNewNotebookField" styleClass="list-cell" text="_New Notebook" />
+                <MenuItem fx:id="logoff" accelerator="Ctrl+O" mnemonicParsing="true" onAction="#cmd_logOff" styleClass="list-cell" text="_Log Out" />
 
             </Menu>
 
@@ -23,23 +33,25 @@
 
             <GridPane fx:id="menu" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="225.0" vgap="10">
 
-                <Label fx:id="menuText" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" onMouseClicked="#cmd_showAll"/>
-                <GridPane fx:id="gp_notebooks" GridPane.rowIndex="1" vgap="10" hgap="5" >
+                <Label fx:id="menuText" onMouseClicked="#cmd_showAll" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <GridPane fx:id="gp_notebooks" hgap="5" vgap="10" GridPane.rowIndex="1">
 
                 </GridPane>
-                <TextField fx:id="txt_newBook" GridPane.rowIndex="2" visible="false" onAction="#cmd_createNewNotebook"/>
+                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="2" />
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>
             <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
                <RowConstraints />
             </rowConstraints>
 
             </GridPane>
             <GridPane alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="375.0" vgap="10">
 
-                <Label prefWidth="360" text="Posts" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <ListView fx:id="notes" prefWidth="360.0"  prefHeight="563.00" GridPane.rowIndex="1">
+                <Label prefWidth="190" text="Posts" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <ListView fx:id="notes" prefHeight="563.00" prefWidth="375.0" GridPane.rowIndex="1">
                 </ListView>
             <columnConstraints>
                <ColumnConstraints />
@@ -53,7 +65,9 @@
             <GridPane fx:id="pn_input" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="530" vgap="10">
 
                 <Label fx:id="postText" prefWidth="600.0" text="Note sth." textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <TextArea fx:id="input" prefHeight="540.0" prefWidth="500.0" visible="false" wrapText="true" GridPane.rowIndex="1" />
+
+                <TextArea fx:id="input" prefHeight="520.0" prefWidth="500.0" visible="false" wrapText="true" GridPane.rowIndex="1" />
+                <Label fx:id="createdDate" prefHeight="20.0" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>

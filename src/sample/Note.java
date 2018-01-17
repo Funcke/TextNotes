@@ -8,13 +8,14 @@ import java.util.Date;
  */
 public class Note {
     private String content;
-    private Date creation;
+    private String creation;
     private Date modification;
     private int id;
 
-    public Note(int id, String cont) {
+    public Note(int id, String cont, String created_at) {
         this.id = id;
         this.content = cont;
+        this.creation = created_at;
     }
 
     public int getId() {
@@ -26,7 +27,7 @@ public class Note {
     }
 
     public String getCreation() {
-        return creation.toString();
+        return creation;
     }
 
     public String getModification() {

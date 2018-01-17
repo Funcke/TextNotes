@@ -1,4 +1,4 @@
-package sample;
+package sample.exceptions;
 
 public class NoNotebookSelectedException extends Exception {
     @Override
