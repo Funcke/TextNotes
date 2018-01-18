@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Comparator;
 
 /*
  * @author Jonas Funcke
@@ -124,6 +125,13 @@ public class MainController {
             while (res.next()) {
                 noteList.add(new Note(res.getInt("id"), res.getString("content"), res.getString("created_at")));
             }
+
+            noteList.sort(new Comparator<Note>() {
+                @Override
+                public int compare(Note first, Note second) {
+                    return first.compareTo(second);
+                }
+            });
 
             for (Note n : noteList) {
                 Label note = new Label(n.getContent().split("\n")[0]);

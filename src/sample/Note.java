@@ -6,7 +6,7 @@ import java.util.Date;
  * @author Jonas Funcke
  * @use Represents a note object
  */
-public class Note {
+public class Note implements Comparable<Note>{
     private String content;
     private String creation;
     private Date modification;
@@ -32,5 +32,14 @@ public class Note {
 
     public String getModification() {
         return this.modification.toString();
+    }
+
+    public  int compareTo(Note other) {
+        if(this.id > other.getId())
+            return -1;
+        else if(this.id < other.getId())
+            return 1;
+        else
+            return 0;
     }
 }
