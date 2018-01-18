@@ -10,6 +10,11 @@ In some days our first -msi will be released, wich should make the usage of our 
 
 Java SE Version 8 or newer.
 
+## Security
+
+Please notice, that the user data is still stored in plain text and can easily be
+manipulated or stolen.
+
 ## Future
 * Syncing Notes with the Server
 * note sharing
@@ -22,3 +27,4 @@ Java SE Version 8 or newer.
 * saving user and posts in DB
 * Dividing notes by owner
 * Creating Notebooks and dividing Notes in them
+* user stays loged in
