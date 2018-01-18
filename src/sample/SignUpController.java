@@ -1,19 +1,22 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Window;
 
 import java.sql.*;
 
 public class SignUpController {
-    @FXML TextField username;
-    @FXML PasswordField password;
-    @FXML TextField passwordVisible;
-    @FXML PasswordField repeatPassword;
-    @FXML TextField passwordRepeatVisible;
+    @FXML TextField txt_username;
+    @FXML PasswordField pw_password;
+    @FXML TextField txt_passwordVisible;
+    @FXML PasswordField pw_repeatPassword;
+    @FXML TextField txt_passwordRepeatVisible;
     @FXML Alert info;
-    @FXML CheckBox showPassword;
+    @FXML CheckBox cb_showPassword;
     private Connection userDB;
     private boolean unused = true;
 
@@ -29,29 +32,29 @@ public class SignUpController {
             String pwordInput = "";
 
             while(rs.next()){
-                if(rs.getString("username").contentEquals(username.getText())) {
+                if(rs.getString("username").contentEquals(txt_username.getText())) {
                     this.unused = false;
                 }
             }
 
-            if(showPassword.isSelected()){
-                if(this.unused && this.passwordVisible.getText().contentEquals(this.passwordRepeatVisible.getText())) {
-                    pwordInput = this.passwordVisible.getText();
+            if(cb_showPassword.isSelected()){
+                if(this.unused && this.txt_passwordVisible.getText().contentEquals(this.txt_passwordRepeatVisible.getText())) {
+                    pwordInput = this.txt_passwordVisible.getText();
                 }
             }
             else
             {
-                if(this.unused && this.password.getText().contentEquals(this.repeatPassword.getText())) {
-                    pwordInput = this.password.getText();
+                if(this.unused && this.pw_password.getText().contentEquals(this.pw_repeatPassword.getText())) {
+                    pwordInput = this.pw_password.getText();
                 }
             }
 
             if(this.unused && (!pwordInput.contentEquals(""))) {
                 PreparedStatement pstmt = userDB.prepareStatement("INSERT INTO users (username, password) VALUES(?, ?)");
-                pstmt.setString(1, username.getText());
+                pstmt.setString(1, txt_username.getText());
                 pstmt.setString(2, pwordInput);
                 pstmt.execute();
-                Window current = this.username.getScene().getWindow();
+                Window current = this.txt_username.getScene().getWindow();
                 current.hide();
             }
             else{
@@ -67,24 +70,24 @@ public class SignUpController {
     }
 
     public void viewPW() {
-        if(showPassword.isSelected()) {
-            this.password.setVisible(false);
-            this.passwordVisible.setVisible(true);
-            this.passwordVisible.setText(password.getText());
+        if(cb_showPassword.isSelected()) {
+            this.pw_password.setVisible(false);
+            this.txt_passwordVisible.setVisible(true);
+            this.txt_passwordVisible.setText(pw_password.getText());
 
-            this.repeatPassword.setVisible(false);
-            this.passwordRepeatVisible.setVisible(true);
-            this.passwordRepeatVisible.setText(this.repeatPassword.getText());
+            this.pw_repeatPassword.setVisible(false);
+            this.txt_passwordRepeatVisible.setVisible(true);
+            this.txt_passwordRepeatVisible.setText(this.pw_repeatPassword.getText());
         }
         else
         {
-            this.passwordVisible.setVisible(false);
-            this.password.setVisible(true);
-            this.password.setText(this.passwordVisible.getText());
+            this.txt_passwordVisible.setVisible(false);
+            this.pw_password.setVisible(true);
+            this.pw_password.setText(this.txt_passwordVisible.getText());
 
-            this.passwordRepeatVisible.setVisible(false);
-            this.repeatPassword.setVisible(true);
-            this.repeatPassword.setText(this.passwordRepeatVisible.getText());
+            this.txt_passwordRepeatVisible.setVisible(false);
+            this.pw_repeatPassword.setVisible(true);
+            this.pw_repeatPassword.setText(this.txt_passwordRepeatVisible.getText());
         }
     }
 

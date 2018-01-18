@@ -9,38 +9,43 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
 
 public class LogInController {
-    @FXML Label header;
-    @FXML Label uNameHead;
-    @FXML Label pWordHead;
-    @FXML Label footer;
-    @FXML TextField uName;
-    @FXML PasswordField pWord;
-    @FXML Button submit;
-    @FXML Button signUp;
+    @FXML Label lbl_header;
+    @FXML Label lbl_uName;
+    @FXML Label lbl_pWord;
+    @FXML Label lbl_footer;
+    @FXML TextField txt_uName;
+    @FXML PasswordField txt_pWord;
+    @FXML Button cmd_submit;
+    @FXML Button cmd_signUp;
     private Connection userDB;
 
     @FXML
     public void initialize() {
-        this.header.setText("Log In");
-        this.uNameHead.setText("Username");
-        this.pWordHead.setText("Password");
+        this.lbl_header.setText("Log In");
+        this.lbl_uName.setText("Username");
+        this.lbl_pWord.setText("Password");
         this.connectToDB();
     }
 
     @FXML
     public void cmd_submit() {
-        String password = pWord.getText();
-        String username = uName.getText();
+        String password = txt_pWord.getText();
+        String username = txt_uName.getText();
         boolean userValid = false;
 
         userValid = this.validUser(username, password);
 
         if (userValid) {
             try {
+                BufferedWriter bw = new BufferedWriter(new FileWriter("user"));
+                bw.write(password + ";" + username);
+                bw.close();
                 this.open(username);
             } catch (IOException|SQLException e) {
                 System.err.println(e.getLocalizedMessage());
@@ -85,7 +90,7 @@ public class LogInController {
         userDB.close();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("views/Main.fxml"));
         Parent root = loader.load();
-        Stage view = (Stage) signUp.getScene().getWindow();
+        Stage view = (Stage) cmd_signUp.getScene().getWindow();
         MainController controller = loader.getController();
 
         controller.init(name);

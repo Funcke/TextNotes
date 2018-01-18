@@ -9,10 +9,10 @@
         <MenuBar maxHeight="20.0" maxWidth="1125.0">
 
             <Menu mnemonicParsing="true" text="_File">
-                <MenuItem fx:id="create" accelerator="Ctrl+N" mnemonicParsing="true" onAction="#cmd_create" styleClass="list-cell" text="_New" />
-                <MenuItem fx:id="save" accelerator="Ctrl+S" mnemonicParsing="true" onAction="#cmd_save" styleClass="list-cell" text="_Save" visible="false" />
-                <MenuItem fx:id="newNotebook" accelerator="Ctrl+Shift+N" mnemonicParsing="true" onAction="#cmd_activateNewNotebookField" styleClass="list-cell" text="_New Notebook" />
-                <MenuItem fx:id="logoff" accelerator="Ctrl+O" mnemonicParsing="true" onAction="#cmd_logOff" styleClass="list-cell" text="_Log Out" />
+                <MenuItem fx:id="mi_create" accelerator="Ctrl+N" mnemonicParsing="true" onAction="#cmd_create" styleClass="list-cell" text="_New" />
+                <MenuItem fx:id="mi_save" accelerator="Ctrl+S" mnemonicParsing="true" onAction="#cmd_save" styleClass="list-cell" text="_Save" visible="false" />
+                <MenuItem fx:id="mi_newNotebook" accelerator="Ctrl+Shift+N" mnemonicParsing="true" onAction="#cmd_activateNewNotebookField" styleClass="list-cell" text="_New Notebook" />
+                <MenuItem fx:id="mi_logoff" accelerator="Ctrl+O" mnemonicParsing="true" onAction="#cmd_logOff" styleClass="list-cell" text="_Log Out" />
 
             </Menu>
 
@@ -20,9 +20,9 @@
 
         <HBox maxHeight="585.0" maxWidth="1125.0">
 
-            <GridPane fx:id="menu" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="225.0" vgap="10">
+            <GridPane fx:id="gp_menu" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="225.0" vgap="10">
 
-                <Label fx:id="menuText" onMouseClicked="#cmd_showAll" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="lbl_menuText" onMouseClicked="#cmd_showAll" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <GridPane fx:id="gp_notebooks" hgap="5" vgap="10" GridPane.rowIndex="1">
 
                 </GridPane>
@@ -40,7 +40,7 @@
             <GridPane alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="375.0" vgap="10">
 
                 <Label prefWidth="190" text="Posts" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <ListView fx:id="notes" prefHeight="563.00" prefWidth="375.0" GridPane.rowIndex="1">
+                <ListView fx:id="lv_notes" prefHeight="563.00" prefWidth="375.0" GridPane.rowIndex="1">
                 </ListView>
             <columnConstraints>
                <ColumnConstraints />
@@ -53,10 +53,10 @@
             </GridPane>
             <GridPane fx:id="pn_input" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="530" vgap="10">
 
-                <Label fx:id="postText" prefWidth="600.0" text="Note sth." textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="lbl_postText" prefWidth="600.0" text="Note sth." textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-                <TextArea fx:id="input" prefHeight="520.0" prefWidth="500.0" visible="false" wrapText="true" GridPane.rowIndex="1" />
-                <Label fx:id="createdDate" prefHeight="20.0" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextArea fx:id="txt_input" prefHeight="520.0" prefWidth="500.0" visible="false" wrapText="true" GridPane.rowIndex="1" />
+                <Label fx:id="lbl_createdDate" prefHeight="20.0" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>

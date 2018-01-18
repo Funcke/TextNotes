@@ -11,6 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import sample.exceptions.NoNotebookSelectedException;
 
+import java.io.File;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -22,12 +23,12 @@ import java.util.Comparator;
  * @use Controller for the Main Window
  */
 public class MainController {
-    @FXML MenuItem create;
-    @FXML MenuItem save;
-    @FXML TextArea input;
-    @FXML Label postText;
-    @FXML Label createdDate;
-    @FXML ListView notes;
+    @FXML MenuItem mi_create;
+    @FXML MenuItem mi_save;
+    @FXML TextArea txt_input;
+    @FXML Label lbl_postText;
+    @FXML Label lbl_createdDate;
+    @FXML ListView lv_notes;
     @FXML TextField txt_newBook;
     @FXML GridPane gp_notebooks;
 
@@ -48,7 +49,7 @@ public class MainController {
 
     public void init(String nm) {
         this.name = nm;
-        this.postText.setText("Note sth. " + this.name + "!");
+        this.lbl_postText.setText("Note sth. " + this.name + "!");
         this.noteBooks = new ToggleGroup();
         initializeForm();
     }
@@ -107,7 +108,7 @@ public class MainController {
      * @view Notes
      */
     private void initializeNotes() {
-        notes.getItems().clear(); //clears all notes   from the view
+        lv_notes.getItems().clear(); //clears all notes   from the view
         try {
             PreparedStatement stmt;
             if(this.notebook.equals("")) {
@@ -140,11 +141,11 @@ public class MainController {
                 note.setOnMouseClicked((mouseEvent) -> {
                     //event on left click
                     if (mouseEvent.getButton() == MouseButton.PRIMARY) {
-                        input.setVisible(true);
-                        input.setText(n.getContent());
-                        createdDate.setText(n.getCreation());
-                        create.setVisible(false);
-                        save.setVisible(true);
+                        txt_input.setVisible(true);
+                        txt_input.setText(n.getContent());
+                        lbl_createdDate.setText(n.getCreation());
+                        mi_create.setVisible(false);
+                        mi_save.setVisible(true);
 
                         this.editMode = true;
                         this.id = n.getId();
@@ -170,7 +171,7 @@ public class MainController {
                             }
                         }
                 });
-                notes.getItems().add(note); //add to listView
+                lv_notes.getItems().add(note); //add to listView
             }
         } catch(SQLException err) {
             System.err.println(err.getMessage());
@@ -211,9 +212,9 @@ public class MainController {
     }
 
     private void stopInput() {
-        this.save.setVisible(false);
-        this.create.setVisible(true);
-        this.input.setVisible(false);
+        this.mi_save.setVisible(false);
+        this.mi_create.setVisible(true);
+        this.txt_input.setVisible(false);
     }
 
     /*
@@ -226,13 +227,13 @@ public class MainController {
      */
     @FXML
     public void cmd_save() {
-        if(!this.input.getText().contentEquals("") ){
+        if(!this.txt_input.getText().contentEquals("") ){
             try {
 
                 if (this.editMode) {
                     PreparedStatement stmt = notesDB.prepareStatement("UPDATE notes SET content = ?, created_at = ? WHERE id = ?;");
 
-                    stmt.setString(1, input.getText());
+                    stmt.setString(1, txt_input.getText());
                     stmt.setString(2, Calendar.getInstance().getTime().toString());
                     stmt.setInt(3, this.id);
                     stmt.execute();
@@ -241,7 +242,7 @@ public class MainController {
                     if(this.notebook.equals(""))
                         throw new NoNotebookSelectedException();
                     PreparedStatement stmt = notesDB.prepareStatement("INSERT INTO notes (content, owner, notebook, created_at) VALUES(?, ?, ?, ?)");
-                    stmt.setString(1, input.getText());
+                    stmt.setString(1, txt_input.getText());
                     stmt.setString(2, this.name);
                     stmt.setString(3, this.notebook);
                     stmt.setString(4, Calendar.getInstance().getTime().toString());
@@ -253,8 +254,8 @@ public class MainController {
                 error.show();
             }
         }
-        this.input.setText("");
-        this.createdDate.setText("");
+        this.txt_input.setText("");
+        this.lbl_createdDate.setText("");
         this.initializeNotes();
         this.stopInput();
     }
@@ -269,9 +270,12 @@ public class MainController {
     @FXML
     public void cmd_logOff() {
         try {
+            File file = new File("user");
+            if(file.exists())
+                file.delete();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("views/LogIn.fxml"));
             Parent root = loader.load();
-            Stage view = (Stage) notes.getScene().getWindow();
+            Stage view = (Stage) lv_notes.getScene().getWindow();
 
             view.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
             view.setTitle("Log In");
@@ -293,11 +297,11 @@ public class MainController {
      */
     @FXML
     public void cmd_create() {
-        this.createdDate.setText("");
-        this.create.setVisible(false);
-        this.save.setVisible(true);
-        this.input.setVisible(true);
-        this.input.requestFocus();
+        this.lbl_createdDate.setText("");
+        this.mi_create.setVisible(false);
+        this.mi_save.setVisible(true);
+        this.txt_input.setVisible(true);
+        this.txt_input.requestFocus();
     }
 
     @FXML
