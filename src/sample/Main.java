@@ -52,7 +52,7 @@ public class Main extends Application {
         {
             root = FXMLLoader.load(getClass().getResource("views/LogIn.fxml"));
             primaryStage = new Stage();
-            primaryStage.setScene(new Scene(root, 300, 325));
+            primaryStage.setScene(new Scene(root, 350, 375));
 
             if(file.exists())
                 file.delete();

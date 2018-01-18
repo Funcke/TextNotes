@@ -150,26 +150,26 @@ public class MainController {
                         this.editMode = true;
                         this.id = n.getId();
                     } else if (mouseEvent.getButton() == MouseButton.SECONDARY) {
-                            if (!this.editMode) {
-                                StringBuilder sb = new StringBuilder();
+                        if (!this.editMode) {
+                            StringBuilder sb = new StringBuilder();
 
-                                try {
-                                    PreparedStatement state = notesDB.prepareStatement("DELETE FROM notes WHERE id = ? AND owner= ?");
+                            try {
+                                PreparedStatement state = notesDB.prepareStatement("DELETE FROM notes WHERE id = ? AND owner= ?");
 
-                                    for (Note nin : noteList) {
-                                        if (nin.getContent() == n.getContent()) {
-                                            sb.append(n.getId());
-                                            state.setString(1, sb.toString());
-                                            state.setString(2, this.name);
-                                            state.execute();
-                                        }
+                                for (Note nin : noteList) {
+                                    if (nin.getContent() == n.getContent()) {
+                                        sb.append(n.getId());
+                                        state.setString(1, sb.toString());
+                                        state.setString(2, this.name);
+                                        state.execute();
                                     }
-                                } catch (SQLException err) {
-                                    System.out.println(err.getMessage());
                                 }
-                                this.initializeForm();
+                            } catch (SQLException err) {
+                                System.out.println(err.getMessage());
                             }
+                            this.initializeNotes();
                         }
+                    }
                 });
                 lv_notes.getItems().add(note); //add to listView
             }
