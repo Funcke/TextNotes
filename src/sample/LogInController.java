@@ -69,7 +69,7 @@ public class LogInController {
             Stage view = new Stage();
 
             view.getIcons().add(new Image("file:ic_format_align_right_black_48dp.png"));
-            view.setTitle("New User");
+            view.setTitle("TextNotes");
             view.setScene(new Scene(root, 350, 400));
             view.show();
 
