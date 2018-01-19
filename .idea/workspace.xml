@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/views/Main.fxml" afterPath="$PROJECT_DIR$/src/sample/views/Main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/views/SignUp.fxml" afterPath="$PROJECT_DIR$/src/sample/views/SignUp.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,7 +158,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="147">
               <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding />
             </state>
@@ -212,9 +210,9 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Jonas &lt;funckejonas@gmail.com&gt;" />
         <option value="Jonas &lt;funckejonas@gmail.co&gt;" />
         <option value="f" />
-        <option value="Jonas &lt;funckejonas@gmail.com&gt;" />
         <option value="funckejonas@gmail.com" />
         <option value="Jonas Funcke" />
       </list>
@@ -638,7 +636,7 @@
       <workItem from="1516344925482" duration="636000" />
       <workItem from="1516346223609" duration="180000" />
       <workItem from="1516346610474" duration="701000" />
-      <workItem from="1516356462617" duration="254000" />
+      <workItem from="1516356462617" duration="286000" />
     </task>
     <task id="LOCAL-00001" summary="Added data access and styled main Window">
       <created>1509105946466</created>
@@ -766,11 +764,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516356528943</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="widened log In window so text fits">
+      <created>1516356746763</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1516356746763</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157568000" />
+    <option name="totallyTimeSpent" value="157600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -872,7 +877,8 @@
     <MESSAGE value="Updated Readme.md" />
     <MESSAGE value="Deleted old style files" />
     <MESSAGE value="resized menu font size" />
-    <option name="LAST_COMMIT_MESSAGE" value="resized menu font size" />
+    <MESSAGE value="widened log In window so text fits" />
+    <option name="LAST_COMMIT_MESSAGE" value="widened log In window so text fits" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1407,7 +1413,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="147">
           <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
           <folding />
         </state>
