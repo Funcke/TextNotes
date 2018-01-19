@@ -26,8 +26,9 @@ public class Main extends Application {
             br.close();
             try {
                 Connection userDB = DriverManager.getConnection("jdbc:sqlite:posts.db");
-                Statement stmt = userDB.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT username, password FROM users;");
+                PreparedStatement stmt = userDB.prepareStatement("SELECT username, password FROM users WHERE username = ?;");
+                stmt.setString(1, data[0]);
+                ResultSet rs = stmt.executeQuery();
 
                 while(rs.next()){
                     if(rs.getString("username").contentEquals(data[0]) && rs.getString("password").contentEquals(data[1])){

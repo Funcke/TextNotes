@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Comparator;
 
-/*
+/**
  * @author Jonas Funcke
  * @use Controller for the Main Window
  */
@@ -41,10 +41,10 @@ public class MainController {
     private boolean editMode = false;
     private int id;
 
-    /*
+    /**
      * @use Initializes the Controller and is called after instantiation.
      *
-     * @param takes the name of the user as parameter
+     * @param nm name if the user
      * @return none
      */
 
@@ -55,7 +55,7 @@ public class MainController {
         initializeForm();
     }
 
-    /*
+    /**
      * @use Initializes the Fields for the TextNotes and the Notebooks associated
      * with the user.
      * First check for correct connection to the database and if it's the case,
@@ -63,7 +63,7 @@ public class MainController {
      * Calls the methods initializeNotes and initializeNotebooks for
      * initializing the components.
      *
-     * @param none
+     * @param -
      * @return none
      */
     private void initializeForm(){
@@ -100,11 +100,11 @@ public class MainController {
         this.initializeNotebooks();
     }
 
-    /*
+    /**
      * Initializes the Notes view of the Window and retrieves all note objects
      * associated with the user from the notes table.
      *
-     * @param none
+     * @param -
      * @return none
      * @view Notes
      */
@@ -127,6 +127,12 @@ public class MainController {
         }
     }
 
+    /**
+     * @use used to update the listview containing the Notes.
+     *
+     * @param rs
+     * @throws SQLException
+     */
     private void initializeNoteList(ResultSet rs) throws SQLException {
         lv_notes.getItems().clear();
         noteList.clear();

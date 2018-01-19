@@ -24,7 +24,7 @@
 
                 <Label fx:id="lbl_menuText" onMouseClicked="#cmd_showAll" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <Label text="Search:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-                <TextField fx:id="txt_search" onKeyTyped="#cmd_search" prefWidth="225" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="txt_search" onKeyTyped ="#cmd_search" prefWidth="225" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
                 <GridPane fx:id="gp_notebooks" hgap="5" vgap="10" GridPane.rowIndex="3">
 
                 </GridPane>
@@ -42,7 +42,7 @@
             <GridPane alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="375.0" vgap="10">
 
                 <Label prefWidth="190" text="Posts" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <ListView fx:id="lv_notes" prefHeight="563.00" prefWidth="375.0" GridPane.rowIndex="1">
+                <ListView fx:id="lv_notes" prefHeight="563.00" prefWidth="375.0" GridPane.rowIndex="1" focusTraversable="true">
                 </ListView>
             <columnConstraints>
                <ColumnConstraints />

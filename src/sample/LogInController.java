@@ -121,8 +121,10 @@ public class LogInController {
 
     private boolean validUser(String username, String password) {
         try {
-            Statement stmt = userDB.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT username, password FROM users;");
+            PreparedStatement stmt = userDB.prepareStatement("SELECT username, password FROM users WHERE username = ?;");
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+
 
             while(rs.next()){
                 if(rs.getString("username").contentEquals(username) && rs.getString("password").contentEquals(password))
