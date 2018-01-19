@@ -6,7 +6,7 @@
 
     <VBox alignment="TOP_RIGHT" maxHeight="600.0" prefWidth="1125.0" spacing="0">
 
-        <MenuBar maxWidth="1125.0" prefHeight="19.0" prefWidth="1125.0" style="-fx-font-size: 0.9em;">
+        <MenuBar maxWidth="1125.0" prefHeight="19.0" prefWidth="1125.0">
 
             <Menu mnemonicParsing="true" text="_File">
                 <MenuItem fx:id="mi_create" accelerator="Ctrl+N" mnemonicParsing="true" onAction="#cmd_create" styleClass="list-cell" text="_New" />
@@ -23,12 +23,13 @@
             <GridPane fx:id="gp_menu" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="225.0" vgap="10">
 
                 <Label fx:id="lbl_menuText" onMouseClicked="#cmd_showAll" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <Label text="Search:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-                <TextField fx:id="txt_search" onKeyTyped ="#cmd_search" prefWidth="225" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-                <GridPane fx:id="gp_notebooks" hgap="5" vgap="10" GridPane.rowIndex="3">
+
+                <GridPane fx:id="gp_notebooks" hgap="5" vgap="10" GridPane.rowIndex="1">
 
                 </GridPane>
-                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="4" />
+                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="2" />
+                <Label text="Search:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="txt_search" onKeyTyped ="#cmd_search" prefWidth="225" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>
