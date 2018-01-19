@@ -30,6 +30,7 @@ public class MainController {
     @FXML Label lbl_createdDate;
     @FXML ListView lv_notes;
     @FXML TextField txt_newBook;
+    @FXML TextField txt_search;
     @FXML GridPane gp_notebooks;
 
     private String name = "";
@@ -108,7 +109,6 @@ public class MainController {
      * @view Notes
      */
     private void initializeNotes() {
-        lv_notes.getItems().clear(); //clears all notes   from the view
         try {
             PreparedStatement stmt;
             if(this.notebook.equals("")) {
@@ -121,63 +121,68 @@ public class MainController {
             stmt.setString(1, name);
             ResultSet res = stmt.executeQuery();
 
-            noteList.clear();
-
-            while (res.next()) {
-                noteList.add(new Note(res.getInt("id"), res.getString("content"), res.getString("created_at")));
-            }
-
-            noteList.sort(new Comparator<Note>() {
-                @Override
-                public int compare(Note first, Note second) {
-                    return first.compareTo(second);
-                }
-            });
-
-            for (Note n : noteList) {
-                Label note = new Label(n.getContent().split("\n")[0]);
-
-                note.setId("post");
-                note.setOnMouseClicked((mouseEvent) -> {
-                    //event on left click
-                    if (mouseEvent.getButton() == MouseButton.PRIMARY) {
-                        txt_input.setVisible(true);
-                        txt_input.setText(n.getContent());
-                        lbl_createdDate.setText(n.getCreation());
-                        mi_create.setVisible(false);
-                        mi_save.setVisible(true);
-
-                        this.editMode = true;
-                        this.id = n.getId();
-                    } else if (mouseEvent.getButton() == MouseButton.SECONDARY) {
-                        if (!this.editMode) {
-                            StringBuilder sb = new StringBuilder();
-
-                            try {
-                                PreparedStatement state = notesDB.prepareStatement("DELETE FROM notes WHERE id = ? AND owner= ?");
-
-                                for (Note nin : noteList) {
-                                    if (nin.getContent() == n.getContent()) {
-                                        sb.append(n.getId());
-                                        state.setString(1, sb.toString());
-                                        state.setString(2, this.name);
-                                        state.execute();
-                                    }
-                                }
-                            } catch (SQLException err) {
-                                System.out.println(err.getMessage());
-                            }
-                            this.initializeNotes();
-                        }
-                    }
-                });
-                lv_notes.getItems().add(note); //add to listView
-            }
+            this.initializeNoteList(res);
         } catch(SQLException err) {
             System.err.println(err.getMessage());
         }
     }
 
+    private void initializeNoteList(ResultSet rs) throws SQLException {
+        lv_notes.getItems().clear();
+        noteList.clear();
+
+        while (rs.next()) {
+            noteList.add(new Note(rs.getInt("id"), rs.getString("content"), rs.getString("created_at")));
+        }
+
+        noteList.sort(new Comparator<Note>() {
+            @Override
+            public int compare(Note first, Note second) {
+                return first.compareTo(second);
+            }
+        });
+
+        for (Note n : noteList) {
+            Label note = new Label(n.getContent().split("\n")[0]);
+
+            note.setId("post");
+            note.setOnMouseClicked((mouseEvent) -> {
+                //event on left click
+                if (mouseEvent.getButton() == MouseButton.PRIMARY) {
+                    txt_input.setVisible(true);
+                    txt_input.setText(n.getContent());
+                    lbl_createdDate.setText(n.getCreation());
+                    mi_create.setVisible(false);
+                    mi_save.setVisible(true);
+
+                    this.editMode = true;
+                    this.id = n.getId();
+                } else if (mouseEvent.getButton() == MouseButton.SECONDARY) {
+                    if (!this.editMode) {
+                        StringBuilder sb = new StringBuilder();
+
+                        try {
+                            PreparedStatement state = notesDB.prepareStatement("DELETE FROM notes WHERE id = ? AND owner= ?");
+
+                            for (Note nin : noteList) {
+                                if (nin.getContent() == n.getContent()) {
+                                    sb.append(n.getId());
+                                    state.setString(1, sb.toString());
+                                    state.setString(2, this.name);
+                                    state.execute();
+                                }
+                            }
+                        } catch (SQLException err) {
+                            System.out.println(err.getMessage());
+                        }
+                        this.initializeNotes();
+                    }
+                }
+            });
+            lv_notes.getItems().add(note); //add to listView
+        }
+
+    }
 
     /*
      * Initializes the Notebooks View and retrieves all Notebook objects from the DB
@@ -335,5 +340,30 @@ public class MainController {
         this.notebook = "";
         this.initializeNotes();
         this.initializeNotebooks();
+    }
+
+    @FXML
+    public void cmd_search() {
+        PreparedStatement stmt;
+        try {
+            if (this.notebook.equals("")) {
+                stmt = notesDB.prepareStatement("SELECT id, content, created_at FROM notes where owner = ? AND content LIKE ?");
+            }
+            else{
+                stmt = notesDB.prepareStatement("SELECT id, content, created_at FROM notes WHERE owner = ? AND  content LIKE ? AND notebook = ?");
+                stmt.setString(3, this.notebook);
+            }
+
+            stmt.setString(1, this.name);
+            stmt.setString(2, "%" + this.txt_search.getText() + "%");
+
+            ResultSet rs = stmt.executeQuery();
+
+            this.initializeNoteList(rs);
+        }catch(SQLException err){
+            Alert info = new Alert(Alert.AlertType.ERROR);
+            info.setContentText(err.getMessage());
+            info.show();
+        }
     }
 }
