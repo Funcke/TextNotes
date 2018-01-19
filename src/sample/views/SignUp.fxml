@@ -5,9 +5,9 @@
 <GridPane xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="sample.SignUpController" stylesheets="@../styles/main.css"
-          prefHeight="325" prefWidth="300" alignment="center" hgap="10" vgap="10">
+          prefHeight="350" prefWidth="375" alignment="center" hgap="10" vgap="10">
 
-    <Label text="Hey, Welcome!" GridPane.rowIndex="0"/>
+    <Label text="Log In" style="-fx-font-size: 2em;" GridPane.rowIndex="0"/>
 
     <Label text="Username" GridPane.rowIndex="1" />
     <TextField fx:id="txt_username" GridPane.rowIndex="2"/>

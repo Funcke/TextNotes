@@ -6,7 +6,7 @@
 
     <VBox alignment="TOP_RIGHT" maxHeight="600.0" prefWidth="1125.0" spacing="0">
 
-        <MenuBar maxWidth="1125.0" prefHeight="19.0" prefWidth="1125.0" style="-fx-font-size: 0.9jem;">
+        <MenuBar maxWidth="1125.0" prefHeight="19.0" prefWidth="1125.0" style="-fx-font-size: 0.9em;">
 
             <Menu mnemonicParsing="true" text="_File">
                 <MenuItem fx:id="mi_create" accelerator="Ctrl+N" mnemonicParsing="true" onAction="#cmd_create" styleClass="list-cell" text="_New" />
