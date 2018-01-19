@@ -9,6 +9,11 @@ import javafx.stage.Window;
 
 import java.sql.*;
 
+/**
+ * @author Jonas Funcke
+ *
+ * Controller for the Sign Up Window
+ */
 public class SignUpController {
     @FXML TextField txt_username;
     @FXML PasswordField pw_password;
@@ -20,10 +25,18 @@ public class SignUpController {
     private Connection userDB;
     private boolean unused = true;
 
+    /**
+     * Setter for the connection to the DB
+     * @param conn
+     */
     public void setConnection(Connection conn){
         this.userDB = conn;
     }
 
+    /**
+     * onClick action for the submiting of the form.
+     * Registers the user in the database and closes itself.
+     */
     @FXML
     public void submit() {
         try {
@@ -69,6 +82,11 @@ public class SignUpController {
         }
     }
 
+    /**
+     * onChange operation for checkbox.
+     * Shows or hides the password fields and shows or hides the textFields
+     */
+    @FXML
     public void viewPW() {
         if(cb_showPassword.isSelected()) {
             this.pw_password.setVisible(false);

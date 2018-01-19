@@ -20,7 +20,7 @@ import java.util.Comparator;
 
 /**
  * @author Jonas Funcke
- * @use Controller for the Main Window
+ * Controller for the Main Window
  */
 public class MainController {
     @FXML MenuItem mi_create;
