@@ -41,7 +41,7 @@ public class MainController {
     private boolean editMode = false;
     private int id;
     private Thread test;
-    private ArrayList<Notification> notficationList;
+    private ConcurrentArrayList<Notification> notficationList;
 
     /**
      * @use Initializes the Controller and is called after instantiation.
@@ -86,7 +86,7 @@ public class MainController {
             System.err.println(err.getMessage() + "88");
         }
     }
-        this.notficationList = new ArrayList<>();
+        this.notficationList = new ConcurrentArrayList<>();
         try {
             try {
                 PreparedStatement pstmt = notesDB.prepareStatement("INSERT INTO notifications(owner, message, time) VALUES(?, ?, ?);");

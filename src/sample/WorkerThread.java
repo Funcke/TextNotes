@@ -4,17 +4,16 @@ import javafx.scene.control.Alert;
 
 import java.awt.*;
 import java.sql.*;
-import java.util.ArrayList;
 
 /**
  * @author Jonas Funcke
  */
 public class WorkerThread extends Thread {
-    private ArrayList<Notification> notificationList;
+    private ConcurrentArrayList<Notification> notificationList;
     private String username;
     private Connection conn;
     private PreparedStatement stmt;
-    public WorkerThread(String un, ArrayList<Notification> list) throws SQLException{
+    public WorkerThread(String un, ConcurrentArrayList<Notification> list) throws SQLException{
         super();
         this.username = un;
         this.notificationList = list;
@@ -22,15 +21,18 @@ public class WorkerThread extends Thread {
         stmt = conn.prepareStatement("SELECT message, time FROM notifications WHERE owner = ?");
         stmt.setString(1, username);
         ResultSet rs = stmt.executeQuery();
+        notificationList.lock();
         while(rs.next()) {
             notificationList.add(new Notification(rs.getString(1), rs.getLong(2)));
         }
+        notificationList.unlock();
     }
 
     @Override
     public void run() {
         try {
             while(true){
+                notificationList.lock();
                 Notification n;
                 for(int i = 0 ; i < notificationList.size(); i++) {
                     n = (Notification)notificationList.toArray()[i];
@@ -53,7 +55,7 @@ public class WorkerThread extends Thread {
                   }
 
                 }
-
+                notificationList.unlock();
             }
         }catch(AWTException|java.net.MalformedURLException err ) {
             Alert info = new Alert(Alert.AlertType.ERROR);
