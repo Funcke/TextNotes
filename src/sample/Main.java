@@ -39,7 +39,7 @@ public class Main extends Application {
 
                         controller.init(data[0]);
 
-                        primaryStage.setScene(new Scene(root, 1125, 600));
+                        primaryStage.setScene(new Scene(root, 1195, 600));
                         userValid = true;
                         break;
                     }

@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.GridPane;
+import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
 import sample.exceptions.NoNotebookSelectedException;
 
@@ -25,7 +26,8 @@ import java.util.Comparator;
 public class MainController {
     @FXML MenuItem mi_create;
     @FXML MenuItem mi_save;
-    @FXML TextArea txt_input;
+    @FXML
+    HTMLEditor html_input;
     @FXML Label lbl_postText;
     @FXML Label lbl_createdDate;
     @FXML ListView lv_notes;
@@ -176,14 +178,14 @@ public class MainController {
         });
 
         for (Note n : noteList) {
-            Label note = new Label(n.getContent().split("\n")[0]);
+            Label note = new Label(n.getContent().replaceAll("</h1>", "\n").replaceAll("\\<.*?\\>", "").split("\n")[0]);
 
             note.setId("post");
             note.setOnMouseClicked((mouseEvent) -> {
                 //event on left click
                 if (mouseEvent.getButton() == MouseButton.PRIMARY) {
-                    txt_input.setVisible(true);
-                    txt_input.setText(n.getContent());
+                    html_input.setVisible(true);
+                    html_input.setHtmlText(n.getContent());
                     lbl_createdDate.setText(n.getCreation());
                     mi_create.setVisible(false);
                     mi_save.setVisible(true);
@@ -252,7 +254,7 @@ public class MainController {
     private void stopInput() {
         this.mi_save.setVisible(false);
         this.mi_create.setVisible(true);
-        this.txt_input.setVisible(false);
+        this.html_input.setVisible(false);
     }
 
     /**
@@ -265,13 +267,13 @@ public class MainController {
      */
     @FXML
     public void cmd_save() {
-        if(!this.txt_input.getText().contentEquals("") ){
+        if(!this.html_input.getHtmlText().contentEquals("") ){
             try {
 
                 if (this.editMode) {
                     PreparedStatement stmt = notesDB.prepareStatement("UPDATE notes SET content = ?, created_at = ? WHERE id = ?;");
 
-                    stmt.setString(1, txt_input.getText());
+                    stmt.setString(1, html_input.getHtmlText());
                     stmt.setString(2, Calendar.getInstance().getTime().toString());
                     stmt.setInt(3, this.id);
                     stmt.execute();
@@ -280,7 +282,7 @@ public class MainController {
                     if(this.notebook.equals(""))
                         throw new NoNotebookSelectedException();
                     PreparedStatement stmt = notesDB.prepareStatement("INSERT INTO notes (content, owner, notebook, created_at) VALUES(?, ?, ?, ?)");
-                    stmt.setString(1, txt_input.getText());
+                    stmt.setString(1, html_input.getHtmlText());
                     stmt.setString(2, this.name);
                     stmt.setString(3, this.notebook);
                     stmt.setString(4, Calendar.getInstance().getTime().toString());
@@ -292,7 +294,7 @@ public class MainController {
                 error.show();
             }
         }
-        this.txt_input.setText("");
+        this.html_input.setHtmlText("");
         this.lbl_createdDate.setText("");
         this.initializeNotes();
         this.stopInput();
@@ -338,8 +340,8 @@ public class MainController {
         this.lbl_createdDate.setText("");
         this.mi_create.setVisible(false);
         this.mi_save.setVisible(true);
-        this.txt_input.setVisible(true);
-        this.txt_input.requestFocus();
+        this.html_input.setVisible(true);
+        this.html_input.requestFocus();
     }
 
     @FXML

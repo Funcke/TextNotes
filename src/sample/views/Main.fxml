@@ -2,11 +2,12 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<GridPane alignment="CENTER" prefHeight="600.0" prefWidth="1125.0" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+<?import javafx.scene.web.HTMLEditor?>
+<GridPane alignment="CENTER" prefHeight="600.0" prefWidth="1195.0" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
 
-    <VBox alignment="TOP_RIGHT" maxHeight="600.0" prefWidth="1125.0" spacing="0">
+    <VBox alignment="TOP_RIGHT" maxHeight="600.0" prefWidth="1195.0" spacing="0">
 
-        <MenuBar maxWidth="1125.0" prefHeight="19.0" prefWidth="1125.0">
+        <MenuBar maxWidth="1195.0" prefHeight="19.0" prefWidth="1195.0">
 
             <Menu mnemonicParsing="true" text="_File">
                 <MenuItem fx:id="mi_create" accelerator="Ctrl+N" mnemonicParsing="true" onAction="#cmd_create" styleClass="list-cell" text="_New" />
@@ -19,7 +20,7 @@
 
         </MenuBar>
 
-        <HBox maxHeight="585.0" maxWidth="1125.0">
+        <HBox maxHeight="585.0" maxWidth="1195.0">
 
             <GridPane fx:id="gp_menu" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="225.0" vgap="10">
 
@@ -55,11 +56,12 @@
             </rowConstraints>
 
             </GridPane>
-            <GridPane fx:id="pn_input" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="530" vgap="10">
+            <GridPane fx:id="pn_input" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="600" vgap="10">
 
                 <Label fx:id="lbl_postText" prefWidth="600.0" text="Note sth." textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-                <TextArea fx:id="txt_input" prefHeight="520.0" prefWidth="500.0" visible="false" wrapText="true" GridPane.rowIndex="1" />
+                <!--<TextArea fx:id="txt_input" prefHeight="520.0" prefWidth="500.0" visible="false" wrapText="true" GridPane.rowIndex="1" />-->
+                <HTMLEditor fx:id="html_input" prefHeight="520.0" prefWidth="600.0" visible="false" GridPane.rowIndex="1"/>
                 <Label fx:id="lbl_createdDate" prefHeight="20.0" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2" />
             <columnConstraints>
                <ColumnConstraints />

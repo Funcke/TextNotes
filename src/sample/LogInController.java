@@ -95,7 +95,7 @@ public class LogInController {
 
         controller.init(name);
         view.setTitle("TextNotes");
-        view.setScene(new Scene(root, 1125, 600));
+        view.setScene(new Scene(root, 1195, 600));
         view.setResizable(false);
         view.sizeToScene();
         view.centerOnScreen();
