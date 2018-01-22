@@ -3,19 +3,23 @@ package sample;
 import javafx.scene.control.Alert;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class WorkerThread extends Thread {
-
-    public WorkerThread() {
-
+    private ArrayList<Notification> notificationList;
+    public WorkerThread(ArrayList<Notification> list){
+        super();
+        this.notificationList = list;
     }
 
     @Override
     public void run() {
-        System.out.println("Hello Thread");
         try {
             while(true){
-                this.createMessage("Hello World!");
+                for(Notification n : notificationList) {
+                  if((n.getNotificationTime()/1000) <= (System.currentTimeMillis()/1000) )
+                      this.createMessage(n.getInformation().getContent());
+                }
                 this.sleep(5000);
             }
 

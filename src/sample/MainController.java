@@ -40,6 +40,7 @@ public class MainController {
     private ArrayList<Note> noteList = new ArrayList<>();
     private boolean editMode = false;
     private int id;
+    private Thread test;
 
     /**
      * @use Initializes the Controller and is called after instantiation.
@@ -49,8 +50,13 @@ public class MainController {
      */
 
     public void init(String nm) {
-        Thread test = new WorkerThread();
-        test.start();
+        try {
+            test = new WorkerThread();
+            test.start();
+        }catch(SQLException err) {
+            Alert info = new Alert(Alert.AlertType.ERROR);
+            info.setContentText("Could not connect thread to database!");
+        }
         this.name = nm;
         this.lbl_postText.setText("Note sth. " + this.name + "!");
         this.noteBooks = new ToggleGroup();

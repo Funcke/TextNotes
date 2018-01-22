@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/WorkerThread.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Notification.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MainController.java" afterPath="$PROJECT_DIR$/src/sample/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/WorkerThread.java" afterPath="$PROJECT_DIR$/src/sample/WorkerThread.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,23 +87,23 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="52" column="18" lean-forward="false" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+            <state relative-caret-position="315">
+              <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1516613755706" expanded="true" signature="2436:2718" ph="CREATE TABLE... IF" />
-                <marker date="1516613755706" expanded="true" signature="2753:3242" ph="CREATE TABLE... IF" />
-                <marker date="1516613755706" expanded="true" signature="3838:3895" ph="SELECT id, c... notes" />
-                <marker date="1516613755706" expanded="true" signature="3969:4043" ph="SELECT id, c... notes" />
-                <marker date="1516613755706" expanded="true" signature="5890:5933" ph="DELETE FROM " />
-                <marker date="1516613755706" expanded="true" signature="7081:7123" ph="SELECT name notebooks" />
-                <marker date="1516613755706" expanded="true" signature="8469:8526" ph="UPDATE notes... " />
-                <marker date="1516613755706" expanded="true" signature="9010:9085" ph="INSERT INTO notes... " />
-                <marker date="1516613755706" expanded="true" signature="11411:11457" ph="INSERT INTO notebooks... " />
-                <marker date="1516613755706" expanded="true" signature="12250:12268" ph="SELECT conte... " />
-                <marker date="1516613755706" expanded="true" signature="12250:12326" ph="SELECT id, c... notes" />
-                <marker date="1516613755706" expanded="true" signature="12411:12473" ph="SELECT id, c... notes" />
-                <marker date="1516613755706" expanded="true" signature="12411:12505" ph="SELECT id, c... notes" />
+                <marker date="1516615081237" expanded="true" signature="2654:2936" ph="CREATE TABLE... IF" />
+                <marker date="1516615081237" expanded="true" signature="2971:3460" ph="CREATE TABLE... IF" />
+                <marker date="1516615081237" expanded="true" signature="4056:4113" ph="SELECT id, c... notes" />
+                <marker date="1516615081237" expanded="true" signature="4187:4261" ph="SELECT id, c... notes" />
+                <marker date="1516615081237" expanded="true" signature="6108:6151" ph="DELETE FROM " />
+                <marker date="1516615081237" expanded="true" signature="7299:7341" ph="SELECT name notebooks" />
+                <marker date="1516615081237" expanded="true" signature="8687:8744" ph="UPDATE notes... " />
+                <marker date="1516615081237" expanded="true" signature="9228:9303" ph="INSERT INTO notes... " />
+                <marker date="1516615081237" expanded="true" signature="11629:11675" ph="INSERT INTO notebooks... " />
+                <marker date="1516615081237" expanded="true" signature="12468:12486" ph="SELECT conte... " />
+                <marker date="1516615081237" expanded="true" signature="12468:12544" ph="SELECT id, c... notes" />
+                <marker date="1516615081237" expanded="true" signature="12629:12691" ph="SELECT id, c... notes" />
+                <marker date="1516615081237" expanded="true" signature="12629:12723" ph="SELECT id, c... notes" />
               </folding>
             </state>
           </provider>
@@ -155,13 +156,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkerThread.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WorkerThread.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/WorkerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="273">
+              <caret line="22" column="53" lean-forward="false" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Notification.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Notification.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+              <folding>
+                <element signature="e#268#269#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -287,6 +303,7 @@
         <option value="$PROJECT_DIR$/src/sample/views/SignUp.fxml" />
         <option value="$PROJECT_DIR$/src/sample/SignUpController.java" />
         <option value="$PROJECT_DIR$/src/sample/MainController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Notification.java" />
         <option value="$PROJECT_DIR$/src/sample/WorkerThread.java" />
       </list>
     </option>
@@ -642,7 +659,7 @@
       <workItem from="1516359942769" duration="3712000" />
       <workItem from="1516366406839" duration="5873000" />
       <workItem from="1516376952403" duration="1444000" />
-      <workItem from="1516608445097" duration="3559000" />
+      <workItem from="1516608445097" duration="6158000" />
     </task>
     <task id="LOCAL-00001" summary="Added data access and styled main Window">
       <created>1509105946466</created>
@@ -805,11 +822,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516378131898</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added basic worker thread">
+      <created>1516614606182</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1516614606183</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172627000" />
+    <option name="totallyTimeSpent" value="175226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -916,7 +940,8 @@
     <MESSAGE value="Improved Log In testing procedure" />
     <MESSAGE value="moved search bar" />
     <MESSAGE value="Corrected mistake in text" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected mistake in text" />
+    <MESSAGE value="Added basic worker thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic worker thread" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -930,29 +955,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="68" column="82" lean-forward="false" selection-start-line="68" selection-start-column="82" selection-end-line="68" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1516613755706" expanded="true" signature="2436:2718" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="2753:3242" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="3838:3895" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="3969:4043" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="5890:5933" ph="DELETE FROM " />
-            <marker date="1516613755706" expanded="true" signature="7081:7123" ph="SELECT name notebooks" />
-            <marker date="1516613755706" expanded="true" signature="8469:8526" ph="UPDATE notes... " />
-            <marker date="1516613755706" expanded="true" signature="9010:9085" ph="INSERT INTO notes... " />
-            <marker date="1516613755706" expanded="true" signature="11411:11457" ph="INSERT INTO notebooks... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12268" ph="SELECT conte... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12326" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12473" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12505" ph="SELECT id, c... notes" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/LogInController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2975">
@@ -1033,19 +1035,19 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1516613755706" expanded="true" signature="2436:2718" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="2753:3242" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="3838:3895" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="3969:4043" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="5890:5933" ph="DELETE FROM " />
-            <marker date="1516613755706" expanded="true" signature="7081:7123" ph="SELECT name notebooks" />
-            <marker date="1516613755706" expanded="true" signature="8469:8526" ph="UPDATE notes... " />
-            <marker date="1516613755706" expanded="true" signature="9010:9085" ph="INSERT INTO notes... " />
-            <marker date="1516613755706" expanded="true" signature="11411:11457" ph="INSERT INTO notebooks... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12268" ph="SELECT conte... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12326" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12473" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12505" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="2654:2936" ph="CREATE TABLE... IF" />
+            <marker date="1516615081237" expanded="true" signature="2971:3460" ph="CREATE TABLE... IF" />
+            <marker date="1516615081237" expanded="true" signature="4056:4113" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="4187:4261" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="6108:6151" ph="DELETE FROM " />
+            <marker date="1516615081237" expanded="true" signature="7299:7341" ph="SELECT name notebooks" />
+            <marker date="1516615081237" expanded="true" signature="8687:8744" ph="UPDATE notes... " />
+            <marker date="1516615081237" expanded="true" signature="9228:9303" ph="INSERT INTO notes... " />
+            <marker date="1516615081237" expanded="true" signature="11629:11675" ph="INSERT INTO notebooks... " />
+            <marker date="1516615081237" expanded="true" signature="12468:12486" ph="SELECT conte... " />
+            <marker date="1516615081237" expanded="true" signature="12468:12544" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="12629:12691" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="12629:12723" ph="SELECT id, c... notes" />
           </folding>
         </state>
       </provider>
@@ -1130,19 +1132,19 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1516613755706" expanded="true" signature="2436:2718" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="2753:3242" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="3838:3895" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="3969:4043" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="5890:5933" ph="DELETE FROM " />
-            <marker date="1516613755706" expanded="true" signature="7081:7123" ph="SELECT name notebooks" />
-            <marker date="1516613755706" expanded="true" signature="8469:8526" ph="UPDATE notes... " />
-            <marker date="1516613755706" expanded="true" signature="9010:9085" ph="INSERT INTO notes... " />
-            <marker date="1516613755706" expanded="true" signature="11411:11457" ph="INSERT INTO notebooks... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12268" ph="SELECT conte... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12326" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12473" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12505" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="2654:2936" ph="CREATE TABLE... IF" />
+            <marker date="1516615081237" expanded="true" signature="2971:3460" ph="CREATE TABLE... IF" />
+            <marker date="1516615081237" expanded="true" signature="4056:4113" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="4187:4261" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="6108:6151" ph="DELETE FROM " />
+            <marker date="1516615081237" expanded="true" signature="7299:7341" ph="SELECT name notebooks" />
+            <marker date="1516615081237" expanded="true" signature="8687:8744" ph="UPDATE notes... " />
+            <marker date="1516615081237" expanded="true" signature="9228:9303" ph="INSERT INTO notes... " />
+            <marker date="1516615081237" expanded="true" signature="11629:11675" ph="INSERT INTO notebooks... " />
+            <marker date="1516615081237" expanded="true" signature="12468:12486" ph="SELECT conte... " />
+            <marker date="1516615081237" expanded="true" signature="12468:12544" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="12629:12691" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="12629:12723" ph="SELECT id, c... notes" />
           </folding>
         </state>
       </provider>
@@ -1182,19 +1184,19 @@
           <caret line="166" column="24" lean-forward="false" selection-start-line="166" selection-start-column="24" selection-end-line="166" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1516613755706" expanded="true" signature="2436:2718" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="2753:3242" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="3838:3895" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="3969:4043" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="5890:5933" ph="DELETE FROM " />
-            <marker date="1516613755706" expanded="true" signature="7081:7123" ph="SELECT name notebooks" />
-            <marker date="1516613755706" expanded="true" signature="8469:8526" ph="UPDATE notes... " />
-            <marker date="1516613755706" expanded="true" signature="9010:9085" ph="INSERT INTO notes... " />
-            <marker date="1516613755706" expanded="true" signature="11411:11457" ph="INSERT INTO notebooks... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12268" ph="SELECT conte... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12326" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12473" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12505" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="2654:2936" ph="CREATE TABLE... IF" />
+            <marker date="1516615081237" expanded="true" signature="2971:3460" ph="CREATE TABLE... IF" />
+            <marker date="1516615081237" expanded="true" signature="4056:4113" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="4187:4261" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="6108:6151" ph="DELETE FROM " />
+            <marker date="1516615081237" expanded="true" signature="7299:7341" ph="SELECT name notebooks" />
+            <marker date="1516615081237" expanded="true" signature="8687:8744" ph="UPDATE notes... " />
+            <marker date="1516615081237" expanded="true" signature="9228:9303" ph="INSERT INTO notes... " />
+            <marker date="1516615081237" expanded="true" signature="11629:11675" ph="INSERT INTO notebooks... " />
+            <marker date="1516615081237" expanded="true" signature="12468:12486" ph="SELECT conte... " />
+            <marker date="1516615081237" expanded="true" signature="12468:12544" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="12629:12691" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="12629:12723" ph="SELECT id, c... notes" />
           </folding>
         </state>
       </provider>
@@ -1416,33 +1418,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="52" column="18" lean-forward="false" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        <state relative-caret-position="315">
+          <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1516613755706" expanded="true" signature="2436:2718" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="2753:3242" ph="CREATE TABLE... IF" />
-            <marker date="1516613755706" expanded="true" signature="3838:3895" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="3969:4043" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="5890:5933" ph="DELETE FROM " />
-            <marker date="1516613755706" expanded="true" signature="7081:7123" ph="SELECT name notebooks" />
-            <marker date="1516613755706" expanded="true" signature="8469:8526" ph="UPDATE notes... " />
-            <marker date="1516613755706" expanded="true" signature="9010:9085" ph="INSERT INTO notes... " />
-            <marker date="1516613755706" expanded="true" signature="11411:11457" ph="INSERT INTO notebooks... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12268" ph="SELECT conte... " />
-            <marker date="1516613755706" expanded="true" signature="12250:12326" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12473" ph="SELECT id, c... notes" />
-            <marker date="1516613755706" expanded="true" signature="12411:12505" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="2654:2936" ph="CREATE TABLE... IF" />
+            <marker date="1516615081237" expanded="true" signature="2971:3460" ph="CREATE TABLE... IF" />
+            <marker date="1516615081237" expanded="true" signature="4056:4113" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="4187:4261" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="6108:6151" ph="DELETE FROM " />
+            <marker date="1516615081237" expanded="true" signature="7299:7341" ph="SELECT name notebooks" />
+            <marker date="1516615081237" expanded="true" signature="8687:8744" ph="UPDATE notes... " />
+            <marker date="1516615081237" expanded="true" signature="9228:9303" ph="INSERT INTO notes... " />
+            <marker date="1516615081237" expanded="true" signature="11629:11675" ph="INSERT INTO notebooks... " />
+            <marker date="1516615081237" expanded="true" signature="12468:12486" ph="SELECT conte... " />
+            <marker date="1516615081237" expanded="true" signature="12468:12544" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="12629:12691" ph="SELECT id, c... notes" />
+            <marker date="1516615081237" expanded="true" signature="12629:12723" ph="SELECT id, c... notes" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/WorkerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="273">
+          <caret line="22" column="53" lean-forward="false" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
           </folding>
         </state>
       </provider>
