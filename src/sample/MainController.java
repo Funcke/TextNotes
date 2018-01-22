@@ -49,6 +49,8 @@ public class MainController {
      */
 
     public void init(String nm) {
+        Thread test = new WorkerThread();
+        test.start();
         this.name = nm;
         this.lbl_postText.setText("Note sth. " + this.name + "!");
         this.noteBooks = new ToggleGroup();
