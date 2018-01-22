@@ -3,27 +3,59 @@ package sample;
 import javafx.scene.control.Alert;
 
 import java.awt.*;
+import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * @author Jonas Funcke
+ */
 public class WorkerThread extends Thread {
     private ArrayList<Notification> notificationList;
-    public WorkerThread(ArrayList<Notification> list){
+    private String username;
+    private Connection conn;
+    private PreparedStatement stmt;
+    public WorkerThread(String un, ArrayList<Notification> list) throws SQLException{
         super();
+        this.username = un;
         this.notificationList = list;
+        conn = DriverManager.getConnection("jdbc:sqlite:posts.db");
+        stmt = conn.prepareStatement("SELECT message, time FROM notifications WHERE owner = ?");
+        stmt.setString(1, username);
+        ResultSet rs = stmt.executeQuery();
+        while(rs.next()) {
+            notificationList.add(new Notification(rs.getString(1), rs.getLong(2)));
+        }
     }
 
     @Override
     public void run() {
         try {
             while(true){
-                for(Notification n : notificationList) {
-                  if((n.getNotificationTime()/1000) <= (System.currentTimeMillis()/1000) )
-                      this.createMessage(n.getInformation().getContent());
-                }
-                this.sleep(5000);
-            }
+                Notification n;
+                for(int i = 0 ; i < notificationList.size(); i++) {
+                    n = (Notification)notificationList.toArray()[i];
 
-        }catch(AWTException|java.net.MalformedURLException|InterruptedException err ) {
+                  if((n.getNotificationTime()/1000) <= (System.currentTimeMillis()/1000) ){
+                      System.err.println(n.getInformation());
+                      this.createMessage(n.getInformation());
+                      notificationList.remove(i);
+                      try {
+                          stmt = conn.prepareStatement("DELETE FROM notifications WHERE owner = ? AND message = ? AND time = ?");
+                          stmt.setString(1, this.username);
+                          stmt.setString(2, n.getInformation());
+                          stmt.setLong(3, n.getNotificationTime());
+                          stmt.execute();
+                      }catch(SQLException err) {
+                          Alert info = new Alert(Alert.AlertType.ERROR);
+                          info.setContentText(err.getMessage());
+                          info.show();
+                      }
+                  }
+
+                }
+
+            }
+        }catch(AWTException|java.net.MalformedURLException err ) {
             Alert info = new Alert(Alert.AlertType.ERROR);
             info.setContentText(err.getMessage());
         }

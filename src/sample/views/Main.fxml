@@ -12,6 +12,7 @@
                 <MenuItem fx:id="mi_create" accelerator="Ctrl+N" mnemonicParsing="true" onAction="#cmd_create" styleClass="list-cell" text="_New" />
                 <MenuItem fx:id="mi_save" accelerator="Ctrl+S" mnemonicParsing="true" onAction="#cmd_save" styleClass="list-cell" text="_Save" visible="false" />
                 <MenuItem fx:id="mi_newNotebook" accelerator="Ctrl+Shift+N" mnemonicParsing="true" onAction="#cmd_activateNewNotebookField" styleClass="list-cell" text="_New Notebook" />
+                <MenuItem fx:id="mi_newNotification" accelerator="Ctrl+A" mnemonicParsing="true" onAction="#cmd_createNotification" text="_Create Notification"/>
                 <MenuItem fx:id="mi_logoff" accelerator="Ctrl+O" mnemonicParsing="true" onAction="#cmd_logOff" styleClass="list-cell" text="_Log Out" />
 
             </Menu>

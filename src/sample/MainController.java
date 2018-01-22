@@ -41,6 +41,7 @@ public class MainController {
     private boolean editMode = false;
     private int id;
     private Thread test;
+    private ArrayList<Notification> notficationList;
 
     /**
      * @use Initializes the Controller and is called after instantiation.
@@ -49,9 +50,54 @@ public class MainController {
      * @return none
      */
 
-    public void init(String nm) {
+    public void init(String nm) {if(notesDB == null) {
         try {
-            test = new WorkerThread();
+            notesDB = DriverManager.getConnection("jdbc:sqlite:posts.db");
+
+            System.out.println("Connection succeeded");
+        } catch (SQLException err) {
+            System.err.println(err.getLocalizedMessage());
+        }
+        try {
+            Statement stmt = notesDB.createStatement();
+            stmt.execute("CREATE TABLE IF NOT EXISTS notebooks(\n"
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT,\n"
+                    + "owner VARCHAR NOT NULL,\n"
+                    + "name VARCHAR NOT NULL,"
+                    + "FOREIGN KEY(owner) REFERENCES user(name));");
+            stmt.execute("CREATE TABLE IF NOT EXISTS notes (\n"
+                    + " id integer PRIMARY KEY,\n"
+                    + "content text NOT NULL,"
+                    + " owner VARCHAR NOT NULL,"
+                    + "notebook VARCHAR NOT NULL,"
+                    + "created_at VARCHAR NOT NULL,"
+                    + "FOREIGN KEY(owner) REFERENCES user(username),"
+                    + "FOREIGN KEY (notebook) REFERENCES notebooks(name)"
+                    + ");");
+            stmt.execute("CREATE TABLE IF NOT EXISTS notifications(\n"
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + "owner VARCHAR NOT NULL,"
+                    + "message VARCHAR NOT NULL,"
+                    + "time INTEGER NOT NULL,"
+                    + "FOREIGN KEY (owner) REFERENCES user (username)"
+                    + ");");
+
+        } catch (SQLException err) {
+            System.err.println(err.getMessage() + "88");
+        }
+    }
+        this.notficationList = new ArrayList<>();
+        try {
+            try {
+                PreparedStatement pstmt = notesDB.prepareStatement("INSERT INTO notifications(owner, message, time) VALUES(?, ?, ?);");
+                pstmt.setString(1, this.name);
+                pstmt.setString(2, "Hello World");
+                pstmt.setLong(3, System.currentTimeMillis() + 1000);
+                pstmt.execute();
+            }catch(SQLException err) {
+                System.err.println("Inserting test failed");
+            }
+            test = new WorkerThread(this.name, notficationList);
             test.start();
         }catch(SQLException err) {
             Alert info = new Alert(Alert.AlertType.ERROR);
@@ -76,34 +122,7 @@ public class MainController {
      */
     private void initializeForm(){
         //checks if connection to db exists
-        if(notesDB == null) {
-            try {
-                notesDB = DriverManager.getConnection("jdbc:sqlite:posts.db");
 
-                System.out.println("Connection succeeded");
-            } catch (SQLException err) {
-                System.err.println(err.getLocalizedMessage());
-            }
-            try {
-                Statement stmt = notesDB.createStatement();
-                stmt.execute("CREATE TABLE IF NOT EXISTS notebooks(\n"
-                        + "id INTEGER PRIMARY KEY AUTOINCREMENT,\n"
-                        + "owner VARCHAR NOT NULL,\n"
-                        + "name VARCHAR NOT NULL,"
-                        + "FOREIGN KEY(owner) REFERENCES user(name));");
-                stmt.execute("CREATE TABLE IF NOT EXISTS notes (\n"
-                        + " id integer PRIMARY KEY,\n"
-                        + "content text NOT NULL,"
-                        + " owner VARCHAR NOT NULL,"
-                        + "notebook VARCHAR NOT NULL,"
-                        + "created_at VARCHAR NOT NULL,"
-                        + "FOREIGN KEY(owner) REFERENCES user(username),"
-                        + "FOREIGN KEY (notebook) REFERENCES notebooks(name)"
-                        + ");");
-            } catch (SQLException err) {
-                System.err.println(err.getMessage() + "88");
-            }
-        }
         this.initializeNotes();
         this.initializeNotebooks();
     }
@@ -198,11 +217,11 @@ public class MainController {
 
     }
 
-    /*
+    /**
      * Initializes the Notebooks View and retrieves all Notebook objects from the DB
      * that are associated with the user.
      *
-     * @param none
+     * @param -
      * @return none
      * @view Notebooks
      */
@@ -236,11 +255,11 @@ public class MainController {
         this.txt_input.setVisible(false);
     }
 
-    /*
+    /**
      * Retrieves all Input from the Textarea, creates a new Note object,
      * saves it to the database and calls initializeNotes.
      *
-     * @param none
+     * @param -
      * @return none
      * @view none
      */
@@ -279,10 +298,10 @@ public class MainController {
         this.stopInput();
     }
 
-    /*
+    /**
      * Logs the user off and shows the LogIn form.
      *
-     * @param none
+     * @param -
      * @return none
      * @view LogIn.fxml
      */
@@ -306,11 +325,11 @@ public class MainController {
         }
     }
 
-    /*
+    /**
      * Activates the TextArea fot the user input, shows the save button
      * and hides the new button.
      *
-     * @param none
+     * @param -
      * @return none
      * @view TextArea &  Save
      */
@@ -379,5 +398,10 @@ public class MainController {
             info.setContentText(err.getMessage());
             info.show();
         }
+    }
+
+    @FXML
+    public void cmd_createNotification() {
+
     }
 }

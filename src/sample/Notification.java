@@ -1,16 +1,16 @@
 package sample;
 
 public class Notification {
-    private Note information;
+    private String message;
     private long notificationTime;
 
-    public Notification(Note inf, long time) {
-        this.information = inf;
+    public Notification(String inf, long time) {
+        this.message = inf;
         this.notificationTime = time;
     }
 
-    public Note getInformation() {
-        return this.information;
+    public String getInformation() {
+        return this.message;
     }
 
     public long getNotificationTime() {
