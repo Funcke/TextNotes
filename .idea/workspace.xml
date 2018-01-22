@@ -6,13 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Update at basic worker thread">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/ConcurrentArrayList.java" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MainController.java" afterPath="$PROJECT_DIR$/src/sample/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Notification.java" afterPath="$PROJECT_DIR$/src/sample/Notification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/WorkerThread.java" afterPath="$PROJECT_DIR$/src/sample/WorkerThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/views/Main.fxml" afterPath="$PROJECT_DIR$/src/sample/views/Main.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,8 +160,8 @@
       <file leaf-file-name="ConcurrentArrayList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/ConcurrentArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="336">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -205,7 +200,7 @@
       <file leaf-file-name="Main.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="252">
               <caret line="14" column="161" lean-forward="false" selection-start-line="14" selection-start-column="161" selection-end-line="14" selection-end-column="161" />
               <folding>
                 <marker date="1516625248780" expanded="true" signature="2846:3129" ph="..." />
@@ -675,7 +670,7 @@
       <workItem from="1516630548450" duration="1521000" />
       <workItem from="1516632216319" duration="779000" />
       <workItem from="1516636917446" duration="394000" />
-      <workItem from="1516642647946" duration="26000" />
+      <workItem from="1516642647946" duration="110000" />
     </task>
     <task id="LOCAL-00001" summary="Added data access and styled main Window">
       <created>1509105946466</created>
@@ -852,11 +847,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516617447560</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="finished basic worker thread. Implementation for notification creation still needed.">
+      <created>1516642728084</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1516642728084</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182081000" />
+    <option name="totallyTimeSpent" value="182165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -941,7 +943,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="aDDED bASIC APPLICATION STRUCTURE. Bruuuu, fuck cAPSLOCK" />
     <MESSAGE value="Added data access and styled main Window" />
     <MESSAGE value="Added Readme.md" />
     <MESSAGE value="reformatted .fxml files" />
@@ -966,7 +967,8 @@
     <MESSAGE value="Corrected mistake in text" />
     <MESSAGE value="Added basic worker thread" />
     <MESSAGE value="Update at basic worker thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update at basic worker thread" />
+    <MESSAGE value="finished basic worker thread. Implementation for notification creation still needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="finished basic worker thread. Implementation for notification creation still needed." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1426,7 +1428,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/views/Main.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="252">
           <caret line="14" column="161" lean-forward="false" selection-start-line="14" selection-start-column="161" selection-end-line="14" selection-end-column="161" />
           <folding>
             <marker date="1516625248780" expanded="true" signature="2846:3129" ph="..." />
@@ -1487,8 +1489,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/ConcurrentArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="336">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
