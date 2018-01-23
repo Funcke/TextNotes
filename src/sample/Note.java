@@ -35,11 +35,6 @@ public class Note implements Comparable<Note>{
     }
 
     public  int compareTo(Note other) {
-        if(this.id > other.getId())
-            return -1;
-        else if(this.id < other.getId())
-            return 1;
-        else
-            return 0;
+        return Integer.compare(other.id, this.id);
     }
 }

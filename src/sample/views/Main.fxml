@@ -9,12 +9,12 @@
 
         <MenuBar maxWidth="1195.0" prefHeight="19.0" prefWidth="1195.0">
 
-            <Menu mnemonicParsing="true" text="_File">
-                <MenuItem fx:id="mi_create" accelerator="Ctrl+N" mnemonicParsing="true" onAction="#cmd_create" styleClass="list-cell" text="_New" />
-                <MenuItem fx:id="mi_save" accelerator="Ctrl+S" mnemonicParsing="true" onAction="#cmd_save" styleClass="list-cell" text="_Save" visible="false" />
-                <MenuItem fx:id="mi_newNotebook" accelerator="Ctrl+Shift+N" mnemonicParsing="true" onAction="#cmd_activateNewNotebookField" styleClass="list-cell" text="_New Notebook" />
-                <MenuItem fx:id="mi_newNotification" accelerator="Ctrl+A" mnemonicParsing="true" onAction="#cmd_createNotification" text="_Create Notification"/>
-                <MenuItem fx:id="mi_logoff" accelerator="Ctrl+O" mnemonicParsing="true" onAction="#cmd_logOff" styleClass="list-cell" text="_Log Out" />
+            <Menu text="_File">
+                <MenuItem fx:id="mi_create" accelerator="Ctrl+N" onAction="#cmd_create" styleClass="list-cell" text="_New" />
+                <MenuItem fx:id="mi_save" accelerator="Ctrl+S" onAction="#cmd_save" styleClass="list-cell" text="_Save" visible="false" />
+                <MenuItem fx:id="mi_newNotebook" accelerator="Ctrl+Shift+N" onAction="#cmd_activateNewNotebookField" styleClass="list-cell" text="_New Notebook" />
+                <MenuItem fx:id="mi_newNotification" accelerator="Ctrl+A" onAction="#cmd_createNotification" text="_Create Notification" />
+                <MenuItem fx:id="mi_logoff" accelerator="Ctrl+O" onAction="#cmd_logOff" styleClass="list-cell" text="_Log Out" />
 
             </Menu>
 
@@ -23,19 +23,28 @@
         <HBox maxHeight="585.0" maxWidth="1195.0">
 
             <GridPane fx:id="gp_menu" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="225.0" vgap="10">
-
                 <Label fx:id="lbl_menuText" onMouseClicked="#cmd_showAll" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
                 <GridPane fx:id="gp_notebooks" hgap="5" vgap="10" GridPane.rowIndex="1">
 
                 </GridPane>
-                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="2" />
-                <Label text="Search:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-                <TextField fx:id="txt_search" onKeyTyped ="#cmd_search" prefWidth="225" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="2" >
+                        <tooltip>
+                            <Tooltip text="Enter new Notebook name"/>
+                        </tooltip>
+                </TextField>
+                <Label text="Search:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="txt_search" onKeyTyped="#cmd_search" prefWidth="225" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                    <tooltip>
+                        <Tooltip text="Enter search text!" />
+                    </tooltip>
+                </TextField>
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>
             <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
                <RowConstraints />
                <RowConstraints />
                <RowConstraints />
@@ -45,7 +54,7 @@
             <GridPane alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="375.0" vgap="10">
 
                 <Label prefWidth="190" text="Posts" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                <ListView fx:id="lv_notes" prefHeight="563.00" prefWidth="375.0" GridPane.rowIndex="1" focusTraversable="true">
+                <ListView fx:id="lv_notes" prefHeight="563.00" prefWidth="375.0" GridPane.rowIndex="1">
                 </ListView>
             <columnConstraints>
                <ColumnConstraints />
@@ -61,7 +70,7 @@
                 <Label fx:id="lbl_postText" prefWidth="600.0" text="Note sth." textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
                 <!--<TextArea fx:id="txt_input" prefHeight="520.0" prefWidth="500.0" visible="false" wrapText="true" GridPane.rowIndex="1" />-->
-                <HTMLEditor fx:id="html_input" prefHeight="520.0" prefWidth="600.0" visible="false" GridPane.rowIndex="1"/>
+                <HTMLEditor fx:id="html_input" prefHeight="520.0" prefWidth="600.0" visible="false" GridPane.rowIndex="1" />
                 <Label fx:id="lbl_createdDate" prefHeight="20.0" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2" />
             <columnConstraints>
                <ColumnConstraints />

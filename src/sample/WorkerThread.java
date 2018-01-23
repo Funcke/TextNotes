@@ -13,6 +13,13 @@ public class WorkerThread extends Thread {
     private String username;
     private Connection conn;
     private PreparedStatement stmt;
+
+    /**
+     *
+     * @param un username
+     * @param list List containing all notificaion objects
+     * @throws SQLException Exception occuring during database access
+     */
     public WorkerThread(String un, ConcurrentArrayList<Notification> list) throws SQLException{
         super();
         this.username = un;
@@ -28,6 +35,10 @@ public class WorkerThread extends Thread {
         notificationList.unlock();
     }
 
+    /**
+     * Overrides the native run method of Thread class.
+     * Contains main thread code.
+     */
     @Override
     public void run() {
         try {
@@ -56,17 +67,25 @@ public class WorkerThread extends Thread {
 
                 }
                 notificationList.unlock();
+                sleep(60000);
             }
-        }catch(AWTException|java.net.MalformedURLException err ) {
+        }catch(AWTException|java.net.MalformedURLException|InterruptedException err ) {
             Alert info = new Alert(Alert.AlertType.ERROR);
             info.setContentText(err.getMessage());
         }
     }
 
+    /**
+     * Creates native Windows Notification and displays it in SystemTray
+     * @param notificationText Text describing the notification
+     * @throws AWTException Exception occuring during native tray accessing phase
+     * @throws java.net.MalformedURLException Exception occuring during loading of file
+     */
+
     private void createMessage(String notificationText) throws AWTException, java.net.MalformedURLException {
         SystemTray tray = SystemTray.getSystemTray();
 
-        Image image = Toolkit.getDefaultToolkit().createImage("icon.png");
+        Image image = Toolkit.getDefaultToolkit().createImage("ic_format_align_right_black_48dp.png");
         TrayIcon ti = new TrayIcon(image, "Information");
         ti.setImageAutoSize(true);
         ti.setToolTip("You have a notification!!");
