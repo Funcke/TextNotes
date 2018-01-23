@@ -4,6 +4,10 @@ import sun.awt.Mutex;
 
 import java.util.ArrayList;
 
+/**
+ * @author - Jonas Funcke
+ * @param <T> - Type for ArrayList
+ */
 public class ConcurrentArrayList<T> extends ArrayList<T> {
     private Mutex mutex = new Mutex();
 

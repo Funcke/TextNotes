@@ -27,7 +27,7 @@ public class SignUpController {
 
     /**
      * Setter for the connection to the DB
-     * @param conn
+     * @param conn - Database Connection
      */
     public void setConnection(Connection conn){
         this.userDB = conn;

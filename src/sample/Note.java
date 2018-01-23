@@ -18,19 +18,19 @@ public class Note implements Comparable<Note>{
         this.creation = created_at;
     }
 
-    public int getId() {
+     int getId() {
         return this.id;
     }
 
-    public String getContent() {
+    String getContent() {
         return this.content;
     }
 
-    public String getCreation() {
+    String getCreation() {
         return creation;
     }
 
-    public String getModification() {
+    String getModification() {
         return this.modification.toString();
     }
 

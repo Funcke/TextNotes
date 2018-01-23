@@ -6,7 +6,7 @@ import java.awt.*;
 import java.sql.*;
 
 /**
- * @author Jonas Funcke
+ * @author - Jonas Funcke
  */
 public class WorkerThread extends Thread {
     private ConcurrentArrayList<Notification> notificationList;
@@ -16,11 +16,11 @@ public class WorkerThread extends Thread {
 
     /**
      *
-     * @param un username
-     * @param list List containing all notificaion objects
-     * @throws SQLException Exception occuring during database access
+     * @param un - username
+     * @param list - List containing all notificaion objects
+     * @throws SQLException - Exception occuring during database access
      */
-    public WorkerThread(String un, ConcurrentArrayList<Notification> list) throws SQLException{
+    WorkerThread(String un, ConcurrentArrayList<Notification> list) throws SQLException{
         super();
         this.username = un;
         this.notificationList = list;
@@ -67,9 +67,8 @@ public class WorkerThread extends Thread {
 
                 }
                 notificationList.unlock();
-                sleep(60000);
             }
-        }catch(AWTException|java.net.MalformedURLException|InterruptedException err ) {
+        }catch(AWTException|java.net.MalformedURLException err ) {
             Alert info = new Alert(Alert.AlertType.ERROR);
             info.setContentText(err.getMessage());
         }
@@ -77,9 +76,9 @@ public class WorkerThread extends Thread {
 
     /**
      * Creates native Windows Notification and displays it in SystemTray
-     * @param notificationText Text describing the notification
-     * @throws AWTException Exception occuring during native tray accessing phase
-     * @throws java.net.MalformedURLException Exception occuring during loading of file
+     * @param notificationText - Text describing the notification
+     * @throws AWTException - Exception occuring during native tray accessing phase
+     * @throws java.net.MalformedURLException - Exception occuring during loading of file
      */
 
     private void createMessage(String notificationText) throws AWTException, java.net.MalformedURLException {

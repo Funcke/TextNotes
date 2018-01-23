@@ -52,7 +52,7 @@ public class MainController {
      * @return none
      */
 
-    public void init(String nm) {if(notesDB == null) {
+    void init(String nm) {if(notesDB == null) {
         try {
             notesDB = DriverManager.getConnection("jdbc:sqlite:posts.db");
 
@@ -157,9 +157,9 @@ public class MainController {
     }
 
     /**
-     * @use used to update the listview containing the Notes.
+     * used to update the listview containing the Notes.
      *
-     * @param rs
+     * @param rs - resultset with Notes from DB
      * @throws SQLException
      */
     private void initializeNoteList(ResultSet rs) throws SQLException {
