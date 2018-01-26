@@ -28,9 +28,9 @@
                 <GridPane fx:id="gp_notebooks" hgap="5" vgap="10" GridPane.rowIndex="1">
 
                 </GridPane>
-                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="2" >
+                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="2">
                         <tooltip>
-                            <Tooltip text="Enter new Notebook name"/>
+                            <Tooltip text="Enter new Notebook name" />
                         </tooltip>
                 </TextField>
                 <Label text="Search:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
@@ -39,10 +39,13 @@
                         <Tooltip text="Enter search text!" />
                     </tooltip>
                 </TextField>
+                <DatePicker GridPane.rowIndex="5" fx:id="date_NotificationDate" visible="false"/>
+                <TextField GridPane.rowIndex="6" fx:id="txt_NotificationMessage" visible="false"/>
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>
             <rowConstraints>
+               <RowConstraints />
                <RowConstraints />
                <RowConstraints />
                <RowConstraints />

@@ -26,8 +26,7 @@ import java.util.Comparator;
 public class MainController {
     @FXML MenuItem mi_create;
     @FXML MenuItem mi_save;
-    @FXML
-    HTMLEditor html_input;
+    @FXML HTMLEditor html_input;
     @FXML Label lbl_postText;
     @FXML Label lbl_createdDate;
     @FXML ListView lv_notes;
@@ -118,9 +117,6 @@ public class MainController {
      * initialization of the needed tables.
      * Calls the methods initializeNotes and initializeNotebooks for
      * initializing the components.
-     *
-     * @param -
-     * @return none
      */
     private void initializeForm(){
         //checks if connection to db exists
@@ -132,10 +128,6 @@ public class MainController {
     /**
      * Initializes the Notes view of the Window and retrieves all note objects
      * associated with the user from the notes table.
-     *
-     * @param -
-     * @return none
-     * @view Notes
      */
     private void initializeNotes() {
         try {
@@ -160,7 +152,7 @@ public class MainController {
      * used to update the listview containing the Notes.
      *
      * @param rs - resultset with Notes from DB
-     * @throws SQLException
+     * @throws SQLException - Exception occuring during delete-sql-operation
      */
     private void initializeNoteList(ResultSet rs) throws SQLException {
         lv_notes.getItems().clear();
@@ -222,10 +214,6 @@ public class MainController {
     /**
      * Initializes the Notebooks View and retrieves all Notebook objects from the DB
      * that are associated with the user.
-     *
-     * @param -
-     * @return none
-     * @view Notebooks
      */
     private void initializeNotebooks() {
         gp_notebooks.getChildren().clear();
@@ -260,10 +248,6 @@ public class MainController {
     /**
      * Retrieves all Input from the Textarea, creates a new Note object,
      * saves it to the database and calls initializeNotes.
-     *
-     * @param -
-     * @return none
-     * @view none
      */
     @FXML
     public void cmd_save() {
@@ -302,10 +286,6 @@ public class MainController {
 
     /**
      * Logs the user off and shows the LogIn form.
-     *
-     * @param -
-     * @return none
-     * @view LogIn.fxml
      */
     @FXML
     public void cmd_logOff() {
@@ -330,10 +310,6 @@ public class MainController {
     /**
      * Activates the TextArea fot the user input, shows the save button
      * and hides the new button.
-     *
-     * @param -
-     * @return none
-     * @view TextArea &  Save
      */
     @FXML
     public void cmd_create() {
