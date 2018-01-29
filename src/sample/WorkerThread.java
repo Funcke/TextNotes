@@ -67,8 +67,9 @@ public class WorkerThread extends Thread {
 
                 }
                 notificationList.unlock();
+                Thread.sleep(4000);
             }
-        }catch(AWTException|java.net.MalformedURLException err ) {
+        }catch(AWTException|java.net.MalformedURLException|InterruptedException err ) {
             Alert info = new Alert(Alert.AlertType.ERROR);
             info.setContentText(err.getMessage());
         }

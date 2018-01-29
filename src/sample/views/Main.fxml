@@ -23,24 +23,25 @@
         <HBox maxHeight="585.0" maxWidth="1195.0">
 
             <GridPane fx:id="gp_menu" alignment="TOP_CENTER" hgap="10" prefHeight="600.0" prefWidth="225.0" vgap="10">
-                <Label fx:id="lbl_menuText" onMouseClicked="#cmd_showAll" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-
-                <GridPane fx:id="gp_notebooks" hgap="5" vgap="10" GridPane.rowIndex="1">
-
-                </GridPane>
-                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="2">
-                        <tooltip>
-                            <Tooltip text="Enter new Notebook name" />
-                        </tooltip>
-                </TextField>
-                <Label text="Search:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                <TextField fx:id="txt_search" onKeyTyped="#cmd_search" prefWidth="225" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                <Label text="Search:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="txt_search" onKeyTyped="#cmd_search" prefWidth="225" GridPane.columnIndex="0" GridPane.rowIndex="2">
                     <tooltip>
                         <Tooltip text="Enter search text!" />
                     </tooltip>
                 </TextField>
-                <DatePicker GridPane.rowIndex="5" fx:id="date_NotificationDate" visible="true"/>
-                <TextField GridPane.rowIndex="6" fx:id="txt_NotificationMessage" visible="true"/>
+                <Label text="Create Notification" GridPane.rowIndex="3"/>
+                <DatePicker GridPane.rowIndex="4" fx:id="date_NotificationDate" visible="true"/>
+                <TextField GridPane.rowIndex="5" fx:id="txt_NotificationMessage" visible="true"/>
+                <Label fx:id="lbl_menuText" onMouseClicked="#cmd_showAll" prefWidth="225" text="Menu" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <ScrollPane GridPane.rowIndex="7" prefHeight="350.0">
+                    <GridPane fx:id="gp_notebooks" hgap="5" vgap="10">
+                    </GridPane>
+                </ScrollPane>
+                <TextField fx:id="txt_newBook" onAction="#cmd_createNewNotebook" visible="false" GridPane.rowIndex="8">
+                    <tooltip>
+                        <Tooltip text="Enter new Notebook name" />
+                    </tooltip>
+                </TextField>
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>

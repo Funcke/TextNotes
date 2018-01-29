@@ -18,7 +18,6 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Comparator;
 
 /**
  * @author Jonas Funcke
@@ -165,12 +164,10 @@ public class MainController {
             noteList.add(new Note(rs.getInt("id"), rs.getString("content"), rs.getString("created_at")));
         }
 
-        noteList.sort(new Comparator<Note>() {
-            @Override
-            public int compare(Note first, Note second) {
+        noteList.sort((Note first, Note second) -> {
                 return first.compareTo(second);
             }
-        });
+        );
 
         for (Note n : noteList) {
             Label note = new Label(n.getContent().replaceAll("</h1>", "\n").replaceAll("\\<.*?\\>", "").split("\n")[0]);
