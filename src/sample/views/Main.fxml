@@ -39,8 +39,8 @@
                         <Tooltip text="Enter search text!" />
                     </tooltip>
                 </TextField>
-                <DatePicker GridPane.rowIndex="5" fx:id="date_NotificationDate" visible="false"/>
-                <TextField GridPane.rowIndex="6" fx:id="txt_NotificationMessage" visible="false"/>
+                <DatePicker GridPane.rowIndex="5" fx:id="date_NotificationDate" visible="true"/>
+                <TextField GridPane.rowIndex="6" fx:id="txt_NotificationMessage" visible="true"/>
             <columnConstraints>
                <ColumnConstraints />
             </columnConstraints>

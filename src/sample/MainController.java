@@ -15,6 +15,7 @@ import sample.exceptions.NoNotebookSelectedException;
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Comparator;
@@ -33,6 +34,8 @@ public class MainController {
     @FXML TextField txt_newBook;
     @FXML TextField txt_search;
     @FXML GridPane gp_notebooks;
+    @FXML DatePicker date_NotificationDate;
+    @FXML TextField txt_NotificationMessage;
 
     private String name = "";
     private String notebook = "";
@@ -380,6 +383,20 @@ public class MainController {
 
     @FXML
     public void cmd_createNotification() {
-
+        LocalDate date  = date_NotificationDate.getValue();
+        String message = txt_NotificationMessage.getText();
+        try {
+            PreparedStatement stmt = notesDB.prepareStatement("INSERT INTO notifications(owner, message, time) VALUES(?, ?, ?);");
+            stmt.setString(1, this.name);
+            stmt.setString(2, message);
+            stmt.setLong(3, date.toEpochDay() * 86400000);
+            stmt.execute();
+            this.notficationList.lock();
+            this.notficationList.add(new Notification(message, date.toEpochDay() * 86400000));
+            this.notficationList.unlock();
+        } catch(SQLException err) {
+            Alert info = new Alert(Alert.AlertType.ERROR);
+            info.setContentText(err.getMessage());
+        }
     }
 }
